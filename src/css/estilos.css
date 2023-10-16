@@ -1,0 +1,223 @@
+/**************************/
+/* HEADER SECTION */
+/**************************/
+
+.header {
+	padding: 2.4rem 4.8rem;
+	background-color: #212529;
+}
+
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 64px;
+	width: 64px;
+}
+
+.link--cta:link,
+.link--cta:visited {
+	color: #212529;
+	background-color: #ffe817;
+	padding: 1.6rem 3.2rem;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+	padding: 4.8rem 4.8rem 1.6rem;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(33, 37, 41, 0.8),
+			rgba(33, 37, 41, 0.8)
+		),
+		url(../media/fotos/tierravegetal.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 3.2rem;
+}
+
+.section-hero-container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.hero-heading-sec {
+	display: block;
+	color: #ffe817;
+	font-size: 3.6rem;
+	margin-bottom: 1.6rem;
+}
+
+.primary-heading {
+	font-size: 5.2rem;
+	color: #fffde8;
+	margin-bottom: 4.8rem;
+}
+
+/**************************/
+/* PRODUCTS PREVIEW */
+
+.hero-products-preview {
+	gap: 2.4rem;
+	margin-bottom: 4.8rem;
+}
+
+/**************************/
+/* PRODUCTS */
+
+.hero-products {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap: 1.6rem;
+}
+.hero-products-title {
+	font-size: 2.4rem;
+	letter-spacing: 2px;
+	color: #fff6a2;
+	margin-bottom: 1.6rem;
+	grid-column: 1 / -1;
+	padding-bottom: 7px;
+	border-bottom: 2px solid #fff6a2;
+}
+
+.product-link {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: inherit;
+}
+
+.hero-products-img-box {
+	position: relative;
+	height: 200px;
+}
+
+.hero-product-image {
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.hero-img-gradiente {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		to right bottom,
+		rgba(33, 37, 41, 0.3),
+		rgba(33, 37, 41, 0.3)
+	);
+}
+.hero-product-desc {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2rem;
+	font-weight: 700;
+	background-color: rgba(33, 37, 41, 0.5);
+	padding: 1.6rem 0;
+	width: 100%;
+}
+
+/**************************/
+/* SERVICES */
+
+.hero-services {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.6rem;
+	margin-bottom: 3.2rem;
+}
+
+.service-icon {
+	height: 80px;
+	border-radius: 50%;
+	background-color: #ffe817;
+	padding: 1rem;
+	margin-bottom: 1.6rem;
+}
+
+.hero-service-desc {
+	font-size: 2.4rem;
+}
+
+/**************************/
+/* CTA */
+
+.link--cta-hero:link,
+.link--cta-hero:visited {
+	display: inline-block;
+	font-size: 3.2rem;
+	align-self: flex-start;
+}
+
+/**************************/
+/* PRODUCTS SECTION */
+/**************************/
+
+.section-products {
+	padding: 1.6rem 4.8rem;
+}
+
+.section-products-desc {
+	font-size: 2rem;
+}
+
+.products-container {
+	display: flex;
+	flex-direction: column;
+	background-color: #212529;
+	padding: 4.8rem;
+	border-radius: 5px;
+	gap: 2.4rem;
+}
+
+.product {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 100rem;
+	gap: 1.6rem;
+}
+
+.product-title {
+	color: #ffe817;
+	padding-bottom: 7px;
+	border-bottom: 2px solid #fff6a2;
+}
+
+.proyect-title-right {
+	text-align: end;
+}
+.product-img {
+	width: 100%;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.product-desc-box {
+	font-size: 2rem;
+}
+
+.product-desc-box ul {
+	margin-left: 2.3rem;
+}
+
+.product-desc {
+	margin-bottom: 1.6rem;
+}
+
+.product-desc-title {
+	color: #fff6a2;
+}

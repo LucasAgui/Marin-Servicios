@@ -1,0 +1,185 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Regular.woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Medium.woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Bold.woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+-Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Sizes: 
+
+- Font weights:
+
+
+- Line heights:
+
+--- 02 COLORS
+
+- Primary: 
+#FFE817
+- Secundary: 
+#FFF
+- Tints:
+Primary: 
+#fffde8	EXTRA LIGHT >> TEXTS
+#fff6a2 LIGHT
+
+Primary: 
+Secundary:
+- Accents: 
+- Greys: 
+#212529
+#343a40
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+
+very small containers: 3px
+small containers: 5px
+big containers: 
+
+
+--- 07 WHITESPACE
+
+HEADER / HERO >> 7.2
+HERO / PRODUCTS >> 9.6
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* ---------------------------------------------------------------------------- */
+/* ESTILOS GENERALES */
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Roboto';
+	font-weight: 400;
+	color: #fffde8;
+	background-color: #343a40;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 4.8rem;
+	text-transform: uppercase;
+}
+
+.nav-link:link,
+.nav-link:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+	font-size: 2.4rem;
+}
+
+.secundary-heading {
+	font-size: 2.4rem;
+	color: #fff6a2;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.tertiary-heading {
+	font-size: 3rem;
+}
+
+abbr {
+	text-decoration: none;
+}
+
+/**************************/
+/* HELPER */
+
+/**************************/
+/* FLEX / GRID */
+/**************************/
+
+.dis-flex {
+	display: flex;
+}
+
+.dir-col {
+	flex-direction: column;
+}
+
+.jus-cen {
+	justify-content: center;
+}
+
+.ali-cen {
+	align-items: center;
+}
+
+.ali-top {
+	align-items: top;
+}
+
+/**************************/
+/* FONTS */
+/**************************/
+
+.txtdec-off {
+	text-decoration: none;
+}
+
+.txt-tra-upp {
+	text-transform: uppercase;
+}
+
+/**************************/
+/* MARGIN */
+/**************************/
+
+.mg-b--s {
+	margin-bottom: 2.4rem !important;
+}
+
+.mg-b--m {
+	margin-bottom: 3.2rem !important;
+}
+
+.mg-b--l {
+	margin-bottom: 4.8rem !important;
+}
+
+/**************************/
+/* GRIDS */
+/**************************/
+
+.fill-col {
+	grid-column: 1 / -1;
+}
