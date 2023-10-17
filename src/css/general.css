@@ -61,7 +61,9 @@ big containers:
 --- 07 WHITESPACE
 
 HEADER / HERO >> 7.2
-HERO / PRODUCTS >> 9.6
+HERO / PRODUCTS >> 12.8
+PRODUCTS TITLE / PRODUCTS CONTAINER >> 9.6rem
+SECUNDARY HEADING / HEADING DESCRIPTION >> 3.2rem
 - SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
@@ -106,8 +108,23 @@ body {
 	font-size: 2.4rem;
 }
 
+.img-desc {
+	position: absolute;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	background-color: rgba(33, 37, 41, 0.5);
+	padding: 1.6rem 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+.section-title {
+	padding-left: 4.8rem;
+}
+
 .secundary-heading {
-	font-size: 2.4rem;
+	font-size: 2rem;
 	color: #fff6a2;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -119,6 +136,29 @@ body {
 
 abbr {
 	text-decoration: none;
+}
+
+.slider-btn--right {
+	right: 5%;
+	transform: translate(50%, -50%);
+}
+
+.slider-btn--left {
+	left: 5%;
+	transform: translate(-50%, -50%);
+}
+
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	border: none;
+	background-color: #fff;
+	font-family: inherit;
+	border-radius: 50%;
+	height: 5.5rem;
+	width: 5.5rem;
+	cursor: pointer;
 }
 
 /**************************/
@@ -182,4 +222,15 @@ abbr {
 
 .fill-col {
 	grid-column: 1 / -1;
+}
+
+/**************************/
+/* ICONS */
+/**************************/
+
+.ser-i--w {
+	background-color: #343a40;
+}
+.ser-i--y {
+	background-color: #ffe817;
 }

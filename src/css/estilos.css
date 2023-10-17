@@ -14,8 +14,8 @@
 }
 
 .logo {
-	height: 64px;
-	width: 64px;
+	height: 8rem;
+	width: 8rem;
 }
 
 .link--cta:link,
@@ -99,36 +99,24 @@
 .hero-products-img-box {
 	position: relative;
 	height: 200px;
+	overflow: hidden;
 }
 
 .hero-product-image {
 	height: 100%;
 	width: 100%;
 	border-radius: 5px;
+	opacity: 0.8;
+	transition: all 0.3s;
 }
-
-.hero-img-gradiente {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(
-		to right bottom,
-		rgba(33, 37, 41, 0.3),
-		rgba(33, 37, 41, 0.3)
-	);
+.hero-product-image:hover {
+	opacity: 1;
+	transform: scale(1.2);
 }
 .hero-product-desc {
 	text-align: center;
-	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 2rem;
-	font-weight: 700;
-	background-color: rgba(33, 37, 41, 0.5);
-	padding: 1.6rem 0;
-	width: 100%;
 }
 
 /**************************/
@@ -144,9 +132,7 @@
 .service-icon {
 	height: 80px;
 	border-radius: 50%;
-	background-color: #ffe817;
 	padding: 1rem;
-	margin-bottom: 1.6rem;
 }
 
 .hero-service-desc {
@@ -168,20 +154,28 @@
 /**************************/
 
 .section-products {
-	padding: 1.6rem 4.8rem;
+	padding: 4.8rem 4.8rem;
+}
+
+.section-title {
+	padding-left: 4.8rem;
 }
 
 .section-products-desc {
-	font-size: 2rem;
+	font-size: 4.4rem;
 }
 
 .products {
+	margin-top: 9.6rem;
 }
 .products-tab-container {
 	display: flex;
 	justify-content: center;
-	padding: 0 1.6rem;
+	padding: 0 4.8rem;
 	background-color: #212529;
+	transform: translateY(2px);
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
 	gap: 1.6rem;
 }
 .btn {
@@ -209,31 +203,196 @@
 }
 
 .products-content {
-	grid-template-columns: 2fr 4fr;
-	grid-template-rows: auto 1fr;
-	padding: 1.6rem;
-	background-color: #212529;
-	column-gap: 1.6rem;
-	row-gap: 2.4rem;
+	padding: 1.6rem 4.8rem;
 	display: none;
+	background-color: #212529;
+	border-radius: 5px;
 }
 
 .products-content--active {
+	display: block;
+}
+
+.products-content--1 table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 2rem;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(33, 37, 41, 0.8),
+			rgba(33, 37, 41, 0.8)
+		),
+		url(../media/fotos/tierravegetal.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 1.6rem;
+}
+
+.products-content--1 th,
+.products-content--1 td {
+	padding: 1.6rem 2.4rem;
+	text-align: left;
+}
+
+.products-content--1 th {
+	text-transform: uppercase;
+}
+
+.products-content--1 thead th {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #212529;
+	width: 25%;
+}
+
+.products-content--1 tbody tr:nth-child(odd) {
+	background-color: rgba(33, 37, 41, 0.6);
+}
+
+.products-content--1 tbody tr:nth-child(even) {
+	background-color: rgba(55, 59, 62, 0.6);
+}
+
+.slider-container {
+	margin-bottom: 1.6rem;
+	height: 100%;
+}
+
+.products-galery-slider {
+	position: relative;
+	overflow: hidden;
+	height: 25rem;
+	display: flex;
+	height: 200px;
+}
+
+.slide {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1.6rem;
+	row-gap: 1.6rem;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: transform 1s;
+}
+
+.galery-img-box {
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+}
+.galery-img {
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.galery-text {
+	left: -100%;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+}
+
+.galery-img-box:hover .galery-text {
+	transform: translate(100%, -50%);
+	opacity: 1;
+}
+
+.galery-img:hover {
+	transform: scale(1.2);
+}
+
+.slider-icon {
+	height: 3.2rem;
+}
+
+.products-cta {
+	display: inline-block;
+	font-size: 2rem;
+	color: #ffe817;
+	padding-bottom: 1.6rem;
+}
+
+/**************************/
+/* SERVICES SECTION */
+/**************************/
+.section-services {
+	padding: 9.6rem 4.8rem;
+}
+
+.services-tab-container {
+	display: flex;
+	gap: 1.6rem;
+	flex-direction: column;
+	background: #212529;
+	padding: 1.6rem 4.8rem;
+	border-radius: 5px;
+	padding-bottom: 55rem;
+}
+
+.content-holder {
+	position: relative;
+}
+
+.btn-service {
+	height: 10rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	column-gap: 1.6rem;
+	align-items: center;
+	text-align: left;
+	font-size: 3.2rem;
+	border: none;
+	background: none;
+	color: #fffde8;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.btn-service:not(.btn-service--last) {
+	padding-bottom: 1.6rem;
+	border-bottom: 2px solid #fffde8;
+}
+
+.service-icon {
+	display: inline-block;
+	align-self: center;
+	transition: all 0.3s;
+}
+
+.services-content {
+	position: absolute;
+	top: 105%;
+	left: 0;
+	display: none;
+	grid-template-columns: 3fr auto;
+	font-size: 2rem;
+	height: 250px;
+	width: 100%;
+}
+
+.services-tab--active {
+}
+
+.services-content--active {
 	display: grid;
 }
 
-.products-img-box {
-	grid-row: 1 / -1;
-}
-.products-img {
-	width: 100%;
-	height: 300px;
-	border-radius: 5px;
-}
-.product-header {
-	font-size: 3.2rem;
+.services-content--active {
 }
 
-.products-content p {
-	font-size: 2rem;
+.service-icon--active {
+	transform: rotate(180deg);
+}
+
+.service-desc {
+}
+.service-img {
 }
