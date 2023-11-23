@@ -1,0 +1,26 @@
+.section-hero {
+	margin-top: 8rem;
+	padding: 2.4rem 4.8rem;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(33, 37, 41, 0.8),
+			rgba(33, 37, 41, 0.8)
+		),
+		url(../media/imgs/tierravegetal.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 3.2rem;
+}
+
+.section-products {
+	padding: 4.8rem 4.8rem;
+}
+
+.section-services {
+	padding: 6.4rem 4.8rem;
+}
+
+.section-contact {
+	padding: 6.4rem 4.8rem 8rem;
+}

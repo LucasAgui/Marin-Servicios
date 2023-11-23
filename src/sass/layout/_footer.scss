@@ -1,0 +1,66 @@
+.footer {
+	display: grid;
+	background-color: var(--color-layout-primary);
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 2.4rem;
+	justify-content: center;
+	align-content: center;
+	padding: 8rem 4.8rem;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		&:nth-child(4) {
+			justify-content: space-evenly;
+		}
+		&:not(:nth-child(4)) {
+			border-right: 2px solid #fff;
+			padding-right: 1.6rem;
+		}
+	}
+
+	&__icon {
+		width: 7rem;
+		height: 7rem;
+		background-color: var(--color-layout-primary);
+		padding: 1rem;
+		border-radius: 50%;
+		fill: var(--color-white);
+	}
+
+	&__link {
+		text-decoration: none;
+		color: var(--color-white);
+		font-size: var(--font-size-m);
+	}
+
+	&__btn {
+		font-size: var(--font-size-m);
+		color: var(--color-white);
+		background: none;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		&--email {
+			&-icon {
+				width: 2.5rem;
+				height: 2.5rem;
+				fill: var(--color-white);
+			}
+		}
+	}
+
+	&__img {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	&__location {
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
+}

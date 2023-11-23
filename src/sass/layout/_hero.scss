@@ -1,0 +1,143 @@
+.hero {
+	max-width: 120rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: max-content repeat(3, min-content) min-content;
+
+	&__text {
+		margin-bottom: 4.8rem;
+		background-color: var(--color-primary);
+		transform: skew(-20deg);
+		width: 93%;
+		margin: 0 auto;
+		position: relative;
+
+		&::before {
+			content: '\201C';
+			font-size: 15rem;
+			font-family: sans-serif;
+			position: absolute;
+			top: -2rem;
+			left: -6rem;
+		}
+
+		&::after {
+			content: '\201C';
+			font-size: 15rem;
+			font-family: sans-serif;
+			position: absolute;
+			top: -2rem;
+			right: -6rem;
+			transform: rotateY(180deg);
+		}
+
+		p {
+			margin-bottom: 1.6rem;
+			transform: skew(20deg);
+		}
+
+		h1 {
+			padding: 1rem 1rem 1rem 3.2rem;
+			transform: skew(20deg);
+		}
+	}
+
+	.heading-tertiary {
+		margin-bottom: 1.6rem;
+		grid-column: 1 / -1;
+		padding-bottom: 7px;
+		box-shadow: $shadow-light;
+	}
+
+	&__products {
+		&-container {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 1.6rem;
+		}
+
+		&-product {
+			position: relative;
+			overflow: hidden;
+			max-height: 15vw;
+			max-width: 20vw;
+			transition: all 0.3s 0.1s;
+
+			&:hover {
+				& .hero__products-img {
+					opacity: 1;
+					transform: scale(1.2);
+				}
+				& .hero__products-img-desc {
+					opacity: 0;
+				}
+			}
+		}
+		&-link {
+			width: 100%;
+			height: 100%;
+		}
+
+		&-img {
+			height: 100%;
+			width: 100%;
+			border-radius: var(--border-m);
+			opacity: 0.8;
+			transition: all 0.3s 0.1s;
+		}
+		&-img-desc {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 1.6rem 0;
+			text-align: center;
+			background-color: rgba(33, 37, 41, 0.5);
+			transition: opacity 0.3s;
+		}
+	}
+
+	&__services {
+		&-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.6rem;
+			justify-content: start;
+		}
+
+		&-service {
+			display: flex;
+			flex-direction: column;
+			gap: 0.8rem;
+			cursor: pointer;
+			transition: all 0.2s;
+			border-radius: var(--border-b);
+			padding: 1.6rem;
+			align-items: center;
+			text-align: center;
+			background-color: rgba(#fff, 0.05);
+
+			&:hover {
+				background-color: rgba(#fff, 0.1);
+			}
+		}
+
+		&-icon {
+			height: 8rem;
+			width: 8rem;
+			border-radius: 50%;
+			padding: 1rem;
+			fill: var(--color-layout-primary);
+			background-color: var(--color-primary);
+		}
+	}
+
+	&__cta {
+		display: inline-block;
+		align-self: flex-start;
+		justify-self: start;
+		padding: 1.6rem;
+		background-color: #ffe817;
+		border-radius: var(--border-s);
+	}
+}

@@ -1,0 +1,80 @@
+.contact {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 6.8rem;
+
+	&__text {
+		font-size: 1.2rem;
+		font-weight: 300;
+		margin-bottom: 3.2rem;
+	}
+
+	&__cta-container {
+		display: flex;
+		gap: 1.6rem;
+		align-items: center;
+		font-size: 1.6rem;
+	}
+
+	&__cta--whatsapp {
+		background-color: #ffe817;
+		color: #212529;
+	}
+
+	&__information {
+		font-size: var(--font-size-l);
+		font-weight: 400;
+	}
+}
+
+.information {
+	font-size: var(--font-size-m);
+
+	&__box {
+		display: flex;
+		gap: 1.6rem;
+		padding: 1rem;
+		align-items: center;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: #fff;
+		padding-bottom: 0.1rem;
+		border-bottom: 2px solid $color-primary;
+	}
+
+	&__link--call {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&__btn {
+		background: none;
+		border: none;
+		display: flex;
+		gap: 0.6rem;
+		font-size: var(--font-size-m);
+		color: var(--color-white);
+		padding-bottom: 0.1rem;
+		border-bottom: 2px solid $color-primary;
+		cursor: pointer;
+
+		&--email {
+			&-icon {
+				height: 2.5rem;
+				width: 2.5rem;
+				fill: var(--color-white);
+			}
+		}
+	}
+
+	&__icon {
+		width: 6rem;
+		height: 6rem;
+		fill: #ffe817;
+		background-color: $color-layout-primary;
+		padding: 1rem;
+		border-radius: 50%;
+	}
+}

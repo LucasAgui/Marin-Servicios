@@ -1,0 +1,121 @@
+.services {
+	&__tab-container {
+		display: flex;
+		gap: 1.6rem;
+		flex-direction: column;
+		background: #212529;
+		padding: 1.6rem 4.8rem;
+		border-radius: 5px;
+	}
+
+	&__btn {
+		height: 10rem;
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		column-gap: 1.6rem;
+		align-items: center;
+		text-align: left;
+		font-size: 3.2rem;
+		border: none;
+		background: none;
+		color: var(--color-white);
+		cursor: pointer;
+		transition: all 0.2s;
+		padding-bottom: 1.6rem;
+
+		&:not(.services__btn--last) {
+			box-shadow: $shadow-light;
+		}
+
+		&.services__btn--last.services__tab--active {
+			box-shadow: $shadow-light;
+		}
+
+		.service__icon {
+			display: inline-block;
+			align-self: center;
+			transition: all 0.3s;
+			width: 6rem;
+			height: 6rem;
+			padding: 1rem;
+			background-color: $color-primary;
+			border-radius: 50%;
+
+			&--active {
+				transform: rotate(180deg);
+				background-color: var(--color-white);
+			}
+		}
+	}
+	&__content {
+		display: none;
+		font-size: 2rem;
+		height: 25rem;
+		width: 100%;
+		margin-top: 1.6rem;
+
+		&--active {
+			display: block;
+		}
+
+		&:hover {
+			.service__img img {
+				filter: blur(2px) brightness(60%);
+			}
+			.service__img figcaption {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__cta {
+		display: flex;
+		align-items: end;
+		justify-content: end;
+	}
+	.products__cta {
+		justify-content: end;
+	}
+}
+
+.service {
+	&__text-box {
+		height: 20rem;
+		padding-top: 2rem;
+		transform: translateX(0.8rem);
+		line-height: 1.5;
+		hyphens: auto;
+	}
+
+	&__img {
+		float: left;
+		width: 20rem;
+		height: 20rem;
+		shape-outside: circle(50%);
+		border-radius: 50%;
+		position: relative;
+
+		img {
+			transition: filter 0.3s;
+		}
+
+		figcaption {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 80%;
+			text-align: center;
+			text-transform: uppercase;
+			opacity: 0;
+			transition: all 0.3s;
+			font-weight: 600;
+		}
+	}
+	&:hover {
+		.service__img ~ figcaption {
+			opacity: 1;
+		}
+	}
+}

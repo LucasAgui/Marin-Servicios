@@ -1,0 +1,24 @@
+{
+	"name": "MarinServicios",
+	"version": "1.0.0",
+	"description": "Distribuidor de materiales y servicios en Puerto Madryn",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+		"start": "npm-run-all watch:sass",
+		"compile:sass": "node-sass sass/main.scss src/css/style.comp.css",
+		"concat:css": "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
+		"compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+	},
+	"author": "Lucas",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^10.4.16",
+		"concat": "^1.0.3",
+		"node-sass": "^9.0.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^10.1.0"
+	}
+}

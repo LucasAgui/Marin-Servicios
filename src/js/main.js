@@ -1,30 +1,30 @@
 /////////////////////////////////////////////////////////////////////
 //Tabs products
-const tabs = document.querySelectorAll('.products-tab');
-const tabsContainer = document.querySelector('.products-tab-container');
-const tabsContent = document.querySelectorAll('.products-content');
+const tabs = document.querySelectorAll('.products__tab');
+const tabsContainer = document.querySelector('.products__tab-container');
+const tabsContent = document.querySelectorAll('.products__content');
 
 tabsContainer.addEventListener('click', function (e) {
-	const clicked = e.target.closest('.products-tab');
+	const clicked = e.target.closest('.products__tab');
 	console.log(clicked);
 	if (!clicked) return;
 
 	// Activar tab
-	tabs.forEach((t) => t.classList.remove('products-tab--active'));
-	clicked.classList.add('products-tab--active');
+	tabs.forEach((t) => t.classList.remove('products__tab--active'));
+	clicked.classList.add('products__tab--active');
 
 	// Activar contenido
-	tabsContent.forEach((c) => c.classList.remove('products-content--active'));
+	tabsContent.forEach((c) => c.classList.remove('products__content--active'));
 	document
-		.querySelector(`.products-content--${clicked.dataset.tab}`)
-		.classList.add('products-content--active');
+		.querySelector(`.products__content--${clicked.dataset.tab}`)
+		.classList.add('products__content--active');
 });
 
 /////////////////////////////////////////////////////////////////////
 //Slider
 const slides = document.querySelectorAll('.slide');
-const btnLeft = document.querySelector('.slider-btn--left');
-const btnRight = document.querySelector('.slider-btn--right');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -61,95 +61,121 @@ btnLeft.addEventListener('click', prevSlide);
 
 /////////////////////////////////////////////////////////////////////
 //Tabs services
-const serTabs = document.querySelectorAll('.services-tab');
-const serTabsContainer = document.querySelector('.services-tab-container');
-const serTabsContent = document.querySelectorAll('.services-content');
-const serTabsIcons = document.querySelectorAll('.service-icon');
-const serContentHolders = document.querySelectorAll('.content-holder');
+const serTabs = document.querySelectorAll('.services__tab');
+const serTabsContainer = document.querySelector('.services__tab-container');
+const serTabsContent = document.querySelectorAll('.services__content');
+const serTabsIcons = document.querySelectorAll('.service__icon');
 
 let curTab = 0;
 let needChange = false;
 
 const closeTab = function () {
 	document
-		.querySelector(`.services-tab--${curTab}`)
-		.classList.toggle('services-tab--active');
+		.querySelector(`.services__tab--${curTab}`)
+		.classList.toggle('services__tab--active');
 	document
-		.querySelector(`.services-content--${curTab}`)
-		.classList.toggle('services-content--active');
+		.querySelector(`.services__content--${curTab}`)
+		.classList.toggle('services__content--active');
 	document
-		.querySelector(`.service-icon--${curTab}`)
-		.classList.toggle('service-icon--active');
-
-	console.log(needChange);
-	if (needChange) {
-		moveTabs(curTab);
-		needChange = false;
-	} else {
-		moveTabs(-5);
-		needChange = true;
-	}
-};
-
-const moveTabs = function (tab) {
-	console.log(tab);
-	let indice = 0;
-	serContentHolders.forEach((ch) => {
-		if (indice == tab) {
-			ch.style.transform = 'translateY(250px)';
-		} else {
-			ch.style.transform = 'translateY(0)';
-			indice++;
-		}
-	});
+		.querySelector(`.service__icon--${curTab}`)
+		.classList.toggle('service__icon--active');
 };
 
 const openTab = function (tab) {
 	// Activar contenido
-	serTabsContent.forEach((c) => c.classList.remove('services-content--active'));
+	serTabsContent.forEach((c) =>
+		c.classList.remove('services__content--active')
+	);
 	document
-		.querySelector(`.services-content--${tab}`)
-		.classList.add('services-content--active');
+		.querySelector(`.services__content--${tab}`)
+		.classList.add('services__content--active');
 
 	// Activar icono
-	serTabsIcons.forEach((i) => i.classList.remove('service-icon--active'));
+	serTabsIcons.forEach((i) => i.classList.remove('service__icon--active'));
 	document
-		.querySelector(`.service-icon--${tab}`)
-		.classList.add('service-icon--active');
-
-	moveTabs(tab);
+		.querySelector(`.service__icon--${tab}`)
+		.classList.add('service__icon--active');
 };
 
 serTabsContainer.addEventListener('click', function (e) {
-	const clicked = e.target.closest('.services-tab');
+	const clicked = e.target.closest('.services__tab');
 	if (!clicked) return;
 	if (clicked.dataset.tab == curTab) {
+		// Cerrar tab si es la misma
 		closeTab();
+		serTabsIcons.forEach((i) => i.classList.remove('service__icon--active'));
+		curTab = null;
 	} else {
 		curTab = clicked.dataset.tab;
-		// Cerrar tab si es la misma
 		// Activar tab
-		serTabs.forEach((t) => t.classList.remove('services-tab--active'));
-		clicked.classList.add('services-tab--active');
+		serTabs.forEach((t) => t.classList.remove('services__tab--active'));
+		clicked.classList.add('services__tab--active');
 		openTab(curTab);
 	}
+});
 
-	// // Mover tabs
-	// if (curTab == 1) {
-	// 	serContentHolders[1].style.transform = 'translateY(250px)';
-	// 	serContentHolders[2].style.transform = 'translateY(250px)';
-	// 	serContentHolders[3].style.transform = 'translateY(250px)';
-	// } else if (clicked.dataset.tab == 2) {
-	// 	serContentHolders[1].style.transform = 'translateY(0)';
-	// 	serContentHolders[2].style.transform = 'translateY(250px)';
-	// 	serContentHolders[3].style.transform = 'translateY(250px)';
-	// } else if (clicked.dataset.tab == 3) {
-	// 	serContentHolders[1].style.transform = 'translateY(0)';
-	// 	serContentHolders[2].style.transform = 'translateY(0)';
-	// 	serContentHolders[3].style.transform = 'translateY(250px)';
-	// } else if (clicked.dataset.tab == 4) {
-	// 	serTabs[0].style.transform = 'translateY(0)';
-	// 	serTabs[1].style.transform = 'translateY(0)';
-	// 	serTabs[2].style.transform = 'translateY(0)';
-	// }
+/////////////////////////////////////////////////////////////////////
+//Tabs contact
+/*
+const helpTabs = document.querySelectorAll('.help__tab');
+const helpTabsContainer = document.querySelector('.help__tab-container');
+const helpTabsContent = document.querySelectorAll('.help__content');
+const helpTabsIcons = document.querySelectorAll('.help__icon');
+
+let curTab = 0;
+let needChange = false;
+
+const closeTab = function () {
+	document
+		.querySelector(`.services__tab--${curTab}`)
+		.classList.toggle('services__tab--active');
+	document
+		.querySelector(`.services__content--${curTab}`)
+		.classList.toggle('services__content--active');
+	document
+		.querySelector(`.service__icon--${curTab}`)
+		.classList.toggle('service__icon--active');
+};
+
+const openTab = function (tab) {
+	// Activar contenido
+	serTabsContent.forEach((c) =>
+		c.classList.remove('services__content--active')
+	);
+	document
+		.querySelector(`.services__content--${tab}`)
+		.classList.add('services__content--active');
+
+	// Activar icono
+	serTabsIcons.forEach((i) => i.classList.remove('service__icon--active'));
+	document
+		.querySelector(`.service__icon--${tab}`)
+		.classList.add('service__icon--active');
+};
+
+serTabsContainer.addEventListener('click', function (e) {
+	const clicked = e.target.closest('.services__tab');
+	console.log(clicked);
+	if (!clicked) return;
+	if (clicked.dataset.tab == curTab) {
+		// Cerrar tab si es la misma
+		closeTab();
+		serTabsIcons.forEach((i) => i.classList.remove('service__icon--active'));
+		curTab = null;
+	} else {
+		curTab = clicked.dataset.tab;
+		// Activar tab
+		serTabs.forEach((t) => t.classList.remove('services__tab--active'));
+		clicked.classList.add('services__tab--active');
+		openTab(curTab);
+	}
+});
+*/
+/////////////////////////////////////////////////////////////////////
+// Copiar email
+const email = document.getElementById('email');
+const buttonEmail = document.getElementById('btn-email');
+
+buttonEmail.addEventListener('click', function () {
+	navigator.clipboard.writeText(email.textContent);
 });

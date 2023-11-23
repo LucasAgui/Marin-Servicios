@@ -1,0 +1,26 @@
+@import 'abstract/functions';
+@import 'abstract/variables';
+@import 'abstract/mixins';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/fixed-whatsapp';
+@import 'components/navigation';
+@import 'components/btn';
+@import 'components/table';
+@import 'components/tab';
+@import 'components/slider';
+@import 'components/form';
+@import 'components/help-card';
+
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/products';
+@import 'layout/services';
+@import 'layout/contact';
+@import 'layout/footer';
+
+@import 'pages/home';

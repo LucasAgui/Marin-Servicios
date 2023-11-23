@@ -1,0 +1,36 @@
+/*
+-Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #343a40;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+.logo {
+	height: 8rem;
+	width: 8rem;
+}
+
+.section-title {
+	padding-left: 4.8rem;
+}

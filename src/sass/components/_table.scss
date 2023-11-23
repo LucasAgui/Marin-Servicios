@@ -1,0 +1,65 @@
+.products__content {
+	&--1 {
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: var(--font-size-m);
+			background-image: linear-gradient(
+					to right bottom,
+					rgba(33, 37, 41, 0.8),
+					rgba(33, 37, 41, 0.8)
+				),
+				url(../media/imgs/tierravegetal.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: 0 0.8rem 2rem rgba($color-layout-light, 0.5);
+			border-radius: var(--border-b);
+		}
+		th,
+		td {
+			padding: 1.6rem 2.4rem;
+			text-align: left;
+		}
+
+		th {
+			text-transform: uppercase;
+		}
+
+		thead th {
+			background-color: rgba(255, 255, 255, 0.9);
+			color: #212529;
+			width: 25%;
+
+			&:not(:last-child) {
+				border-right: 2px solid var(--color-layout-primary);
+			}
+
+			&:first-child {
+				border-top-left-radius: var(--border-b);
+			}
+
+			&:last-child {
+				border-top-right-radius: var(--border-b);
+			}
+		}
+
+		tbody tr:nth-child(odd) {
+			background-color: rgba($color-layout-primary, 0.8);
+		}
+
+		tbody tr:nth-child(even) {
+			background-color: rgba($color-layout-light, 0.8);
+		}
+
+		tbody tr:last-child {
+			th {
+				border-bottom-left-radius: var(--border-b);
+			}
+
+			td:last-child {
+				border-bottom-right-radius: var(--border-b);
+			}
+		}
+	}
+}

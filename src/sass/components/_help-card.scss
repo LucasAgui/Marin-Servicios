@@ -1,0 +1,46 @@
+.help {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3.2rem;
+
+	&__btn {
+		background: none;
+		border: none;
+		padding: 1.6rem;
+		display: flex;
+		gap: 3.2rem;
+		box-shadow: $shadow-dark;
+		font-size: 1.6rem;
+		justify-content: space-between;
+		align-items: start;
+		text-align: left;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: rgba(#fff, 0.1);
+			box-shadow: $shadow-primary;
+		}
+	}
+
+	&__text-box {
+		width: 100%;
+		color: var(--color-white);
+	}
+
+	&__title {
+		margin-bottom: 0.8rem;
+		font-size: 2rem;
+	}
+
+	&__img-box {
+		align-self: center;
+		display: flex;
+	}
+
+	&__icon {
+		height: 4rem;
+		width: 4rem;
+		fill: #fff;
+	}
+}

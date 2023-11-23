@@ -1,0 +1,148 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Regular.woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Medium.woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../media/fonts/Roboto-Bold.woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Roboto';
+	font-weight: 400;
+	color: #fffde8;
+}
+
+abbr {
+	text-decoration: none;
+}
+
+/**************************/
+/* TITULOS */
+/**************************/
+
+.heading-primary {
+	font-size: var(--font-size-lst);
+	color: var(--color-layout-primary);
+}
+.heading-secondary {
+	font-size: var(--font-size-m);
+	color: #fff6a2;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.section-heading {
+	margin-bottom: 4.8rem;
+}
+
+.heading-title {
+	display: inline-block;
+	margin: 0 0 1.6rem 4.8rem;
+}
+
+.heading-desc {
+	display: block;
+	font-size: var(--font-size-lst);
+	color: #fff;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.heading-tertiary {
+	font-size: var(--font-size-m);
+	letter-spacing: 2px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/**************************/
+/* HEADER SECTION */
+/**************************/
+
+.navigation {
+	&__link:link,
+	&__link:visited {
+		font-size: 2rem;
+		text-decoration: none;
+		color: #fff;
+	}
+	&__link--cta:link,
+	&__link--cta:visited {
+		color: #212529;
+		background-color: #ffe817;
+		padding: 1.6rem 3.2rem;
+		text-transform: uppercase;
+		border-radius: var(--border-s);
+		font-weight: 600;
+	}
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.hero {
+	max-width: 120rem;
+	margin: 0 auto;
+
+	p {
+		color: var(--color-white);
+		font-size: var(--font-size-sst);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-size: var(--font-size-h);
+		color: #fffde8;
+		margin-bottom: 4.8rem;
+	}
+
+	&__products {
+		&-img-desc {
+			color: var(--color-primary-light);
+			font-size: 2rem;
+			font-weight: 700;
+		}
+	}
+
+	&__services {
+		&-service {
+			p {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__cta:link,
+	&__cta:visited {
+		font-size: 3.2rem;
+		text-decoration: none;
+		color: #212529;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
+
+/**************************/
+/* PRODUCTS SECTION */
+/**************************/
+
+.products {
+	&__cta {
+		font-size: 2rem;
+		color: var(--color-primary);
+		text-decoration: none;
+	}
+}
