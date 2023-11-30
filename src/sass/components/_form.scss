@@ -1,5 +1,6 @@
 .form-container {
-	width: 100%;
+	width: 95%;
+	justify-self: end;
 
 	&__title {
 		font-size: 3rem;
@@ -11,7 +12,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
-	width: 100%;
+	width: 95%;
 
 	input,
 	textarea {

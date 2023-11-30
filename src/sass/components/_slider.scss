@@ -5,28 +5,33 @@
 	align-items: center;
 	margin: 0 auto;
 	height: 100%;
-	width: 100%;
+	width: 83rem;
+
 	position: relative;
 	box-shadow: 0 0.8rem 2rem rgba($color-layout-light, 0.5);
 	background-color: $color-layout-primary;
 	border-radius: var(--border-b);
 
+	@include respond(big-table) {
+		width: 100%;
+	}
 	&__gallery {
 		position: relative;
 		overflow: hidden;
 		height: 30rem;
-		width: calc(100% - 4.8rem);
+		width: calc(75rem + 3.2rem);
 		display: flex;
 		align-content: center;
 		justify-content: center;
 		@include respond(big-table) {
 			height: 25rem;
+			width: calc(100% - 3.2rem);
 		}
 		@include respond(medium-table) {
 			height: 20rem;
 		}
 
-		@include respond(phone) {
+		@include respond(small-phone) {
 			height: 13.2rem;
 			width: calc(100% - 1.6rem);
 		}
@@ -119,7 +124,7 @@
 		grid-template-columns: repeat(3, 18.2rem);
 		height: 15rem;
 	}
-	@include respond(phone) {
+	@include respond(small-phone) {
 		grid-template-columns: repeat(3, 13.2rem);
 		height: 10rem;
 		gap: 0.8rem;
@@ -166,7 +171,7 @@
 		background-color: rgba(33, 37, 41, 0.5);
 		width: 100%;
 		transition: opacity 0.3s;
-		@include respond(phone) {
+		@include respond(small-phone) {
 			font-size: 1rem;
 			letter-spacing: 0.5px;
 		}

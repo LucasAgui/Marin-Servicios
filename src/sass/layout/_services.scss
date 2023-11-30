@@ -66,6 +66,10 @@
 			font-size: 1.6rem;
 			line-height: 1.5;
 		}
+		@include respond(phone) {
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
 
 		&--active {
 			display: block;

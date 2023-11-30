@@ -109,6 +109,12 @@ abbr {
 		text-transform: uppercase;
 		border-radius: var(--border-s);
 		font-weight: 600;
+
+		@include respond(big-table) {
+			padding: 2.4rem 3.2rem;
+			background-color: $color-layout-primary;
+			color: $color-primary;
+		}
 	}
 }
 

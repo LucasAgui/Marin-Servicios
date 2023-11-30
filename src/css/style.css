@@ -146,6 +146,11 @@ abbr {
   text-transform: uppercase;
   border-radius: var(--border-s);
   font-weight: 600; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__link--cta:link, .navigation__link--cta:visited {
+      padding: 2.4rem 3.2rem;
+      background-color: #212529;
+      color: #ffe817; } }
 
 /**************************/
 /* HERO SECTION */
@@ -254,12 +259,18 @@ abbr {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 6rem;
+      font-size: 5.5rem;
       background-color: #ffe817;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
       transition: all 0.3s; } }
+  @media only screen and (max-width: 31em) {
+    .navigation__list {
+      font-size: 4rem; } }
+  @media only screen and (max-width: 25em) {
+    .navigation__list {
+      font-size: 3.2rem; } }
 
 .navigation-mobile {
   display: none;
@@ -273,10 +284,16 @@ abbr {
     border-radius: 50%;
     background-color: #fff;
     border: 2px solid #ffe817; }
+    .navigation-mobile__btn--open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+      transition: all 0.3s; }
     .navigation-mobile__btn--close {
       opacity: 0;
       visibility: hidden;
-      pointer-events: none; }
+      pointer-events: none;
+      transition: all 0.3s 0.1s; }
   .navigation-mobile__img {
     width: 6rem;
     height: 6rem;
@@ -292,12 +309,18 @@ abbr {
   visibility: visible; }
 
 .navigation-open .navigation-mobile__btn {
+  background-color: #212529;
   border: 2px solid #212529; }
 
 .navigation-open .navigation-mobile__btn--close {
   opacity: 1;
   visibility: visible;
   pointer-events: initial; }
+
+.navigation-open .navigation-mobile__btn--open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; }
 
 .btn {
   display: inline-block;
@@ -417,26 +440,30 @@ abbr {
   align-items: center;
   margin: 0 auto;
   height: 100%;
-  width: 100%;
+  width: 83rem;
   position: relative;
   box-shadow: 0 0.8rem 2rem rgba(52, 58, 64, 0.5);
   background-color: #212529;
   border-radius: var(--border-b); }
+  @media only screen and (max-width: 56.25em) {
+    .slider {
+      width: 100%; } }
   .slider__gallery {
     position: relative;
     overflow: hidden;
     height: 30rem;
-    width: calc(100% - 4.8rem);
+    width: calc(75rem + 3.2rem);
     display: flex;
     align-content: center;
     justify-content: center; }
     @media only screen and (max-width: 56.25em) {
       .slider__gallery {
-        height: 25rem; } }
+        height: 25rem;
+        width: calc(100% - 3.2rem); } }
     @media only screen and (max-width: 46em) {
       .slider__gallery {
         height: 20rem; } }
-    @media only screen and (max-width: 31em) {
+    @media only screen and (max-width: 25em) {
       .slider__gallery {
         height: 13.2rem;
         width: calc(100% - 1.6rem); } }
@@ -506,7 +533,7 @@ abbr {
     .slide {
       grid-template-columns: repeat(3, 18.2rem);
       height: 15rem; } }
-  @media only screen and (max-width: 31em) {
+  @media only screen and (max-width: 25em) {
     .slide {
       grid-template-columns: repeat(3, 13.2rem);
       height: 10rem;
@@ -542,13 +569,14 @@ abbr {
     background-color: rgba(33, 37, 41, 0.5);
     width: 100%;
     transition: opacity 0.3s; }
-    @media only screen and (max-width: 31em) {
+    @media only screen and (max-width: 25em) {
       .slide__text {
         font-size: 1rem;
         letter-spacing: 0.5px; } }
 
 .form-container {
-  width: 100%; }
+  width: 95%;
+  justify-self: end; }
   .form-container__title {
     font-size: 3rem;
     font-weight: 400; }
@@ -557,7 +585,7 @@ abbr {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  width: 100%; }
+  width: 95%; }
   .form input,
   .form textarea {
     padding: 2rem 1.6rem;
@@ -665,8 +693,8 @@ abbr {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2.4rem;
-  height: 9rem;
+  padding: 1.6rem 2.4rem;
+  height: 10rem;
   background-color: #212529;
   display: flex;
   justify-content: space-between;
@@ -894,6 +922,10 @@ abbr {
     .services__content {
       font-size: 1.6rem;
       line-height: 1.5; } }
+  @media only screen and (max-width: 31em) {
+    .services__content {
+      font-size: 1.6rem;
+      line-height: 1.5; } }
   .services__content--active {
     display: block; }
   .services__content:hover .service__img img {
@@ -1117,6 +1149,11 @@ abbr {
     width: 5rem;
     height: 5rem;
     padding: 1rem; }
+
+.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.4rem; }
 
 .section-hero {
   margin-top: 8rem;
