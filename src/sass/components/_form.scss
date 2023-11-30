@@ -20,6 +20,12 @@
 		border-radius: var(--border-s);
 		background-color: #212529;
 		border: none;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.4rem #fff;
+			background-color: $color-layout-light;
+		}
 	}
 
 	input::-webkit-placeholder,
@@ -65,7 +71,6 @@
 
 	&__btn {
 		border: none;
-		margin-top: 1.6rem;
 		padding: 1.6rem 0;
 		background-color: var(--color-primary);
 		color: #212529;
@@ -76,7 +81,13 @@
 		cursor: pointer;
 		transition: all 0.3s;
 
-		&:hover {
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.8rem #fff;
+		}
+
+		&:hover,
+		&:active {
 			background-color: var(--color-white);
 		}
 	}

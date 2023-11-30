@@ -11,6 +11,8 @@
 		gap: 1.6rem;
 		@include respond(small-table) {
 			grid-template-columns: repeat(2, minmax(48%, min-content));
+			border-top-right-radius: 0;
+			border-top-left-radius: 0;
 		}
 	}
 

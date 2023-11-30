@@ -403,10 +403,10 @@ abbr {
   background-color: rgba(52, 58, 64, 0.8); }
 
 .products__content--1 tbody tr:last-child th {
-  border-bottom-left-radius: var(--border-b); }
+  border-bottom-left-radius: var(--border-s); }
 
 .products__content--1 tbody tr:last-child td:last-child {
-  border-bottom-right-radius: var(--border-b); }
+  border-bottom-right-radius: var(--border-s); }
 
 .products__tab-container {
   display: grid;
@@ -420,7 +420,9 @@ abbr {
   gap: 1.6rem; }
   @media only screen and (max-width: 40em) {
     .products__tab-container {
-      grid-template-columns: repeat(2, minmax(48%, min-content)); } }
+      grid-template-columns: repeat(2, minmax(48%, min-content));
+      border-top-right-radius: 0;
+      border-top-left-radius: 0; } }
 
 .products__tab {
   transform: translateY(-55%);
@@ -592,6 +594,11 @@ abbr {
     border-radius: var(--border-s);
     background-color: #212529;
     border: none; }
+    .form input:focus,
+    .form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.4rem #fff;
+      background-color: #343a40; }
   .form input::-webkit-placeholder,
   .form textarea::-webkit-placeholder,
   .form input::placeholder,
@@ -626,7 +633,6 @@ abbr {
     width: 100%; }
   .form__btn {
     border: none;
-    margin-top: 1.6rem;
     padding: 1.6rem 0;
     background-color: var(--color-primary);
     color: #212529;
@@ -636,7 +642,10 @@ abbr {
     border-radius: var(--border-s);
     cursor: pointer;
     transition: all 0.3s; }
-    .form__btn:hover {
+    .form__btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.8rem #fff; }
+    .form__btn:hover, .form__btn:active {
       background-color: var(--color-white); }
 
 .form__input-box-name .form__input-box .form__input:placeholder-shown + label {
@@ -663,6 +672,7 @@ abbr {
     gap: 1rem;
     box-shadow: 0 2px 0 #212529;
     font-size: 2rem;
+    font-weight: 300;
     justify-content: space-between;
     align-items: start;
     text-align: left;
@@ -679,7 +689,8 @@ abbr {
     color: var(--color-white); }
   .help__title {
     margin-bottom: 0.8rem;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    font-weight: 500; }
   .help__img-box {
     align-self: center;
     display: flex; }
@@ -787,7 +798,7 @@ abbr {
     width: 100%;
     height: 100%; }
   .hero__products-img {
-    object-fit: cover;
+    object-fit: fill;
     height: 100%;
     width: 100%;
     border-radius: var(--border-m);
@@ -1008,7 +1019,9 @@ abbr {
     color: #212529; }
   .contact__information {
     font-size: var(--font-size-l);
-    font-weight: 400; }
+    font-weight: 400;
+    width: 95%;
+    margin-left: auto; }
 
 .information {
   font-size: var(--font-size-m); }

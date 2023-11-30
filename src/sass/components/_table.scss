@@ -79,11 +79,11 @@
 
 		tbody tr:last-child {
 			th {
-				border-bottom-left-radius: var(--border-b);
+				border-bottom-left-radius: var(--border-s);
 			}
 
 			td:last-child {
-				border-bottom-right-radius: var(--border-b);
+				border-bottom-right-radius: var(--border-s);
 			}
 		}
 	}
