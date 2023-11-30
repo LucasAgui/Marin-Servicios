@@ -1,4 +1,18 @@
 .products__content {
+	.table--mob {
+		display: none;
+	}
+	@include respond(small-table) {
+		.table--desk {
+			display: none;
+		}
+		.table--mob {
+			display: block;
+			width: 100%;
+			font-size: 1.6rem;
+		}
+	}
+
 	&--1 {
 		table {
 			width: 100%;
@@ -20,6 +34,12 @@
 		td {
 			padding: 1.6rem 2.4rem;
 			text-align: left;
+			@include respond(big-table) {
+				padding: 1.6rem 1.6rem;
+			}
+			@include respond(small-table) {
+				padding: 0.8rem 0.8rem;
+			}
 		}
 
 		th {
@@ -31,16 +51,22 @@
 			color: #212529;
 			width: 25%;
 
+			@include respond(small-table) {
+				width: 20%;
+			}
+			@include respond(phone) {
+				width: 25%;
+			}
 			&:not(:last-child) {
 				border-right: 2px solid var(--color-layout-primary);
 			}
 
 			&:first-child {
-				border-top-left-radius: var(--border-b);
+				border-top-left-radius: var(--border-s);
 			}
 
 			&:last-child {
-				border-top-right-radius: var(--border-b);
+				border-top-right-radius: var(--border-s);
 			}
 		}
 

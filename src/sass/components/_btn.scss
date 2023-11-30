@@ -6,9 +6,20 @@
 }
 
 .products .btn {
-	font-weight: 600;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	padding: 2rem 0;
-	border-radius: var(--border-s);
+	font-size: 2.4rem;
+	@include respond(medium-table) {
+		font-size: 2rem;
+	}
+	@include respond(small-table) {
+		font-size: 3rem;
+	}
+	@include respond(phone) {
+		font-size: 2.4rem;
+	}
 }
 
 .products .btn:not(.products__tab--active) {

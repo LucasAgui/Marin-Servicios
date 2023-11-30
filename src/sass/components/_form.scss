@@ -2,7 +2,7 @@
 	width: 100%;
 
 	&__title {
-		font-size: 3.2rem;
+		font-size: 3rem;
 		font-weight: 400;
 	}
 }
@@ -11,12 +11,14 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
+	width: 100%;
 
 	input,
 	textarea {
 		padding: 2rem 1.6rem;
 		border-radius: var(--border-s);
 		background-color: #212529;
+		border: none;
 	}
 
 	input::-webkit-placeholder,
@@ -29,10 +31,12 @@
 	&__input-box {
 		display: flex;
 		flex-direction: column;
+		align-items: start;
+		justify-content: start;
 		width: 100%;
 		label {
 			font-size: 2rem;
-			margin-left: 5px;
+			margin-left: 15px;
 			margin-bottom: 5px;
 			transition: all 0.3s;
 			opacity: 1;
@@ -55,6 +59,7 @@
 		font-family: inherit;
 		color: #fffde8;
 		font-size: var(--font-size-m);
+		width: 100%;
 	}
 
 	&__btn {
@@ -76,8 +81,18 @@
 	}
 }
 
-.form__input:placeholder-shown + .form__label {
+.form__input-box-name .form__input-box .form__input:placeholder-shown + label {
 	opacity: 0;
 	visibility: hidden;
-	transform: translateY(-4rem) translateX(1rem);
+	transform: translateY(-4.5rem);
+}
+
+.form__input-box .form__input:placeholder-shown + label {
+	transform: translateY(-4.5rem);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.form__input-box-name .form__input-box .form__input + label {
+	transform: translateY(0.5rem);
 }

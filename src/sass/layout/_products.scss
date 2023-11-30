@@ -7,6 +7,14 @@
 		&--active {
 			display: block;
 		}
+
+		@include respond(big-table) {
+			padding: 1.6rem 2.4rem;
+		}
+		@include respond(small-table) {
+			padding: 1.6rem 1rem;
+			border-radius: 0;
+		}
 	}
 
 	.products__cta {

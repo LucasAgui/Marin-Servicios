@@ -1,6 +1,6 @@
 .section-hero {
 	margin-top: 8rem;
-	padding: 2.4rem 4.8rem;
+	padding: 2.4rem 2.4rem;
 	background-image: linear-gradient(
 			to right bottom,
 			rgba(33, 37, 41, 0.8),
@@ -11,16 +11,42 @@
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 3.2rem;
+
+	@include respond(phone) {
+		padding: 2.4rem 1.6rem;
+	}
 }
 
 .section-products {
-	padding: 4.8rem 4.8rem;
+	padding: 4.8rem 1rem;
+	@include respond(small-table) {
+		padding: 4.8rem 0;
+	}
 }
 
 .section-services {
-	padding: 6.4rem 4.8rem;
+	padding: 6.4rem 1rem;
+	@include respond(small-table) {
+		padding: 6.4rem 0;
+	}
 }
 
 .section-contact {
-	padding: 6.4rem 4.8rem 8rem;
+	padding: 6.4rem 1rem 8rem;
+	@include respond(big-table) {
+		padding: 4.8rem 1rem 8rem;
+	}
+	@include respond(small-table) {
+		padding: 6.4rem 1.6 2.4rem;
+	}
+}
+
+.footer {
+	padding: 8rem 1rem;
+	@include respond(big-table) {
+		padding: 6.4rem 1rem 2.4rem;
+	}
+	@include respond(small-table) {
+		padding: 6.4rem 1.6rem 2.4rem;
+	}
 }

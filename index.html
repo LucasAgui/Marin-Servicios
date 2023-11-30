@@ -47,8 +47,12 @@
 				</ul>
 			</nav>
 			<div class="navigation-mobile">
-				<button class="navigation-mobile__btn">menu</button>
-				<button class="navigation-mobile__btn">close</button>
+				<button class="navigation-mobile__btn navigation-mobile__btn--open">
+					<img src="src/media/imgs/menu.png" alt="" class="navigation-mobile__img">
+				</button>
+				<button class="navigation-mobile__btn navigation-mobile__btn--close">
+					<img src="src/media/imgs/close.png" alt="" class="navigation-mobile__img">
+				</button>
 			</div>
 		</header>
 		<!--? ----------------------------------------------------------------------------------------  HERO ------------------------------------------------------------------------------------------>
@@ -158,12 +162,12 @@
 				<!--! ----------------------------------------------------------------------------------------  PRIMER CATEGORIA ------------------------------------------------------------------------------------------>
 				<div
 					class="products__content products__content--1 products__content--active">
-					<table class="mg-b--l">
+					<table class="mg-b--l table--desk">
 						<thead>
 							<tr>
 								<th>Material</th>
-								<th>Camión completo</th>
-								<th>Medio camión</th>
+								<th>Completo</th>
+								<th>Medio </th>
 								<th>Metro</th>
 							</tr>
 						</thead>
@@ -208,6 +212,120 @@
 								<th>Tierra vegetal</th>
 								<td>$ 40.000,00</td>
 								<td>$ 32.000,00</td>
+								<td>$ 0</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="mg-b--s table--mob">
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Completo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Arena</th>
+								<td>$ 45.000,00</td>
+							</tr>
+							<tr>
+								<th>Arena fina</th>
+								<td>$ 51.000,00</td>
+							</tr>
+							<tr>
+								<th>Ripio</th>
+								<td>$ 40.000,00</td>
+							</tr>
+							<tr>
+								<th>Granza</th>
+								<td>$ 40.000,00</td>
+							</tr>
+							<tr>
+								<th>Mixto</th>
+								<td>$ 44.000,00</td>
+							</tr>
+							<tr>
+								<th>Calcario</th>
+								<td>$ 35.000,00</td>
+							</tr>
+							<tr>
+								<th>Tierra vegetal</th>
+								<td>$ 40.000,00</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="mg-b--s table--mob">
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Medio </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Arena</th>
+								<td>$ 36.000,00</td>
+							</tr>
+							<tr>
+								<th>Arena fina</th>
+								<td>$ 41.000,00</td>
+							</tr>
+							<tr>
+								<th>Ripio</th>
+								<td>$ 32.000,00</td>
+							</tr>
+							<tr>
+								<th>Granza</th>
+								<td>$ 32.000,00</td>
+							</tr>
+							<tr>
+								<th>Mixto</th>
+								<td>$ 34.000,00</td>
+							</tr>
+							<tr>
+								<th>Calcario</th>
+								<td>$ 32.000,00</td>
+							</tr>
+							<tr>
+								<th>Tierra vegetal</th>
+								<td>$ 32.000,00</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="mg-b--l table--mob">
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Metro</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Arena</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Arena fina</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Ripio</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Granza</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Mixto</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Calcario</th>
+								<td>$ 0</td>
+							</tr>
+							<tr>
+								<th>Tierra vegetal</th>
 								<td>$ 0</td>
 							</tr>
 						</tbody>
@@ -331,7 +449,7 @@
 							</svg>
               <p class="service__header">Destapaciones</p>
 							<svg class="service__icon service__icon--1">
-								<use href="/src/media/svgs/sprite.svg#arrow-bottom"></use>
+								<use href="/src/media/svgs/sprite.svg#row-right"></use>
 							</svg>
             </button>
       <!--! ----------------------------------------------------------------------------------------  PRIMER CATEGORIA ------------------------------------------------------------------------------------------>
@@ -354,7 +472,7 @@
 							</svg>
               <p class="service__header">Levantamientos</p>
 							<svg class="service__icon service__icon--2">
-								<use href="/src/media/svgs/sprite.svg#arrow-bottom"></use>
+								<use href="/src/media/svgs/sprite.svg#row-right"></use>
 							</svg>
             </button>
             <div class="services__content services__content--2"> 
@@ -377,7 +495,7 @@
 							</svg>
               <p class="service__header">Entrega a domicilio</p>
               <svg class="service__icon service__icon--3">
-								<use href="/src/media/svgs/sprite.svg#arrow-bottom"></use>
+								<use href="/src/media/svgs/sprite.svg#row-right"></use>
 							</svg>
             </button>
             <div class="services__content services__content--3">
@@ -406,49 +524,8 @@
 			</div>
           <div class="contact">
             <div class="text-container">
-              <div class="help help__tab-container mg-b--m">
-                <butto class="help__btn help__tab help__tab--1" data-tab="1">
-                  <div class="help__text-box">
-                  <h4 class="help__title">
-                    Me gustaría contratar un servicio
-                  </h4>
-                  <p class="help__text">
-                    Descubre como contratar uno de nuestros servicios.
-                  </p>
-                  </div>
-                  <div class="help__img-box">
-                    <svg class="help__icon">
-											<use href="src/media/svgs/sprite.svg#row-right"></use>
-										</svg>
-                  </div>
-                </butto>
-
-								<div class="help__content help__content--1"> 
-								
-								</div>
-
-                  <button class="help__btn help__tab help__tab--2" data-tab="2">
-                  <div class="help__text-box">
-                  <h4 class="help__title">
-                    Quiero comprar un producto.
-                  </h4>
-                  <p class="help__text">
-                    Para saber más sobre envios y medios de pago.
-                  </p>
-                  </div>
-                  <div class="help__img-box">
-										<svg class="help__icon">
-											<use href="src/media/svgs/sprite.svg#row-right"></use>
-										</svg>
-                  </div>
-                </button>
-
-								<div class="help__content help__content--2"> 
-								</div>
-
-              </div>
-              <h3 class="contact__information mg-b--s">Información de contacto</h3>
-              <div class="information">
+							 <h3 class="contact__information mg-b--m">Información de contacto</h3>
+              <div class="information mg-b--s">
                   <div class="information__box">
 										<svg class="information__icon">
 											<use href="src/media/svgs/sprite.svg#location"></use>
@@ -473,9 +550,49 @@
 										</button>
                   </div>
               </div>
+              <div class="help help__tab-container mg-b--m">
+                <button class="help__btn help__tab help__tab--1" data-tab="1">
+                  <div class="help__text-box">
+                  <h4 class="help__title">
+                    Me gustaría contratar un servicio
+                  </h4>
+                  <p class="help__text">
+                    Descubre como contratar uno de nuestros servicios.
+                  </p>
+                  </div>
+                  <div class="help__img-box">
+                    <svg class="help__icon">
+											<use href="src/media/svgs/sprite.svg#row-right"></use>
+										</svg>
+                  </div>
+                </button>
+
+								<div class="help__content help__content--1"> 
+								</div>
+
+                  <button class="help__btn help__tab help__tab--2" data-tab="2">
+                  <div class="help__text-box">
+                  <h4 class="help__title">
+                    Quiero comprar un producto
+                  </h4>
+                  <p class="help__text">
+                    Para saber más sobre envios y medios de pago.
+                  </p>
+                  </div>
+                  <div class="help__img-box">
+										<svg class="help__icon">
+											<use href="src/media/svgs/sprite.svg#row-right"></use>
+										</svg>
+                  </div>
+                </button>
+
+								<div class="help__content help__content--2"> 
+								</div>
+
+              </div>
             </div>
               <div class="form-container">
-								<h4 class="form-container__title mg-b--m">Envianos un correo con tu consulta:</h4>
+								<h4 class="form-container__title mg-b--m">Envianos tu consulta</h4>
                 <form action="#" class="form">
                   <div class="form__input-box-name">
                     <div class="form__input-box">
@@ -530,7 +647,7 @@
 					</button>
 				</div>
 
-				<div class="footer__item">
+				<div class="footer__item footer__item--social">
 					
 					<a href="#" class="footer__link"><img src="src/media/imgs/facebook.png" alt="Facebook" class="footer__img"></a>
 					<a href="#" class="footer__link"><img src="src/media/imgs/instagram.png" alt="Instagram" class="footer__img"></a>
@@ -538,7 +655,7 @@
 				</div>
 
 				<div class="footer__location">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2880.617848968372!2d-69.357224!3d-43.780791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDQ2JzUwLjkiUyA2OcKwMjEnMjYuMCJX!5e0!3m2!1ses-419!2sar!4v1700777305027!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe class="footer__location-iframe" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2880.617848968372!2d-69.357224!3d-43.780791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDQ2JzUwLjkiUyA2OcKwMjEnMjYuMCJX!5e0!3m2!1ses-419!2sar!4v1700777305027!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</footer>
 		<script src="/src/js/main.js"></script>

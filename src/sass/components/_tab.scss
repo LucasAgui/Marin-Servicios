@@ -1,7 +1,7 @@
 .products {
 	&__tab-container {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(20%, max-content));
+		grid-template-columns: repeat(4, minmax(24%, min-content));
 		justify-content: center;
 		padding: 0 1.6rem;
 		background-color: #212529;
@@ -9,12 +9,15 @@
 		border-top-right-radius: 11px;
 		border-top-left-radius: 11px;
 		gap: 1.6rem;
+		@include respond(small-table) {
+			grid-template-columns: repeat(2, minmax(48%, min-content));
+		}
 	}
 
 	&__tab {
 		transform: translateY(-55%);
 		transition: all 0.2s;
-		font-size: 2rem;
+		font-size: 3rem;
 
 		&--active {
 			transform: translateY(-66%);

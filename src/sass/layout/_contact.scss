@@ -1,12 +1,23 @@
 .contact {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 6.8rem;
+	column-gap: 4.8rem;
 
+	@include respond(desktop) {
+		column-gap: 2.4rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include respond(big-table) {
+		grid-template-columns: 1fr;
+		row-gap: 4.8rem;
+	}
 	&__text {
 		font-size: 1.2rem;
 		font-weight: 300;
 		margin-bottom: 3.2rem;
+		&-container {
+			grid-row: 2 / 3;
+		}
 	}
 
 	&__cta-container {
@@ -33,7 +44,7 @@
 	&__box {
 		display: flex;
 		gap: 1.6rem;
-		padding: 1rem;
+		padding: 0 0 1rem 0;
 		align-items: center;
 	}
 
@@ -70,9 +81,9 @@
 	}
 
 	&__icon {
-		width: 6rem;
-		height: 6rem;
-		fill: #ffe817;
+		width: 5rem;
+		height: 5rem;
+		fill: #fff;
 		background-color: $color-layout-primary;
 		padding: 1rem;
 		border-radius: 50%;

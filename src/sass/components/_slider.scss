@@ -19,6 +19,17 @@
 		display: flex;
 		align-content: center;
 		justify-content: center;
+		@include respond(big-table) {
+			height: 25rem;
+		}
+		@include respond(medium-table) {
+			height: 20rem;
+		}
+
+		@include respond(phone) {
+			height: 13.2rem;
+			width: calc(100% - 1.6rem);
+		}
 	}
 
 	&__btn {
@@ -36,6 +47,11 @@
 		border-radius: 50%;
 		transition: all 0.3s;
 
+		@include respond(phone) {
+			height: 4rem;
+			width: 4rem;
+		}
+
 		&:hover {
 			background-color: rgba($color-primary, 1);
 		}
@@ -45,8 +61,15 @@
 			transform: translate(25%, -50%);
 			z-index: 10;
 
+			@include respond(small-table) {
+				transform: translate(20%, -50%);
+			}
+
 			&:hover {
 				transform: translate(25%, -50%) scale(1.1);
+				@include respond(small-table) {
+					transform: translate(20%, -50%) scale(1.1);
+				}
 			}
 		}
 
@@ -55,8 +78,15 @@
 			z-index: 12;
 			transform: translate(-25%, -50%);
 
+			@include respond(small-table) {
+				transform: translate(-20%, -50%);
+			}
+
 			&:hover {
 				transform: translate(-25%, -50%) scale(1.1);
+				@include respond(table) {
+					transform: translate(-20%, -50%) scale(1.1);
+				}
 			}
 		}
 	}
@@ -64,19 +94,38 @@
 	&__icon {
 		height: 3.2rem;
 		fill: var(--color-layout-primary);
+		@include respond(phone) {
+			height: 2rem;
+			width: 2rem;
+		}
 	}
 }
 
 .slide {
 	display: grid;
 	grid-template-columns: repeat(3, 25rem);
-	column-gap: 1.6rem;
-	row-gap: 1.6rem;
+	gap: 1.6rem;
 	position: absolute;
 	top: 2.5rem;
 	left: 0rem;
 	height: 25rem;
 	transition: transform 1s;
+
+	@include respond(big-table) {
+		grid-template-columns: repeat(3, 20rem);
+		height: 20rem;
+	}
+	@include respond(medium-table) {
+		grid-template-columns: repeat(3, 18.2rem);
+		height: 15rem;
+	}
+	@include respond(phone) {
+		grid-template-columns: repeat(3, 13.2rem);
+		height: 10rem;
+		gap: 0.8rem;
+		top: 1.6rem;
+	}
+
 	&__img-box {
 		position: relative;
 		overflow: hidden;
@@ -117,5 +166,9 @@
 		background-color: rgba(33, 37, 41, 0.5);
 		width: 100%;
 		transition: opacity 0.3s;
+		@include respond(phone) {
+			font-size: 1rem;
+			letter-spacing: 0.5px;
+		}
 	}
 }

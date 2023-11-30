@@ -1,24 +1,31 @@
 .hero {
 	max-width: 120rem;
 	margin: 0 auto;
-	display: grid;
-	grid-template-rows: max-content repeat(3, min-content) min-content;
+	grid-template-rows: min-content repeat(3, min-content) min-content;
 
 	&__text {
-		margin-bottom: 4.8rem;
 		background-color: var(--color-primary);
 		transform: skew(-20deg);
-		width: 93%;
+		width: 85%;
+		text-align: center;
 		margin: 0 auto;
 		position: relative;
-
+		@include respond(phone) {
+			width: calc(100% - 4.8rem);
+			transform: skew(0);
+		}
 		&::before {
 			content: '\201C';
 			font-size: 15rem;
 			font-family: sans-serif;
 			position: absolute;
 			top: -2rem;
-			left: -6rem;
+			left: -5rem;
+
+			@include respond(phone) {
+				left: -3.5rem;
+				font-size: 10rem;
+			}
 		}
 
 		&::after {
@@ -27,8 +34,12 @@
 			font-family: sans-serif;
 			position: absolute;
 			top: -2rem;
-			right: -6rem;
+			right: -5rem;
 			transform: rotateY(180deg);
+			@include respond(phone) {
+				right: -3.5rem;
+				font-size: 10rem;
+			}
 		}
 
 		p {
@@ -37,13 +48,17 @@
 		}
 
 		h1 {
-			padding: 1rem 1rem 1rem 3.2rem;
+			padding: 1rem;
 			transform: skew(20deg);
+			@include respond(phone) {
+				transform: skew(0);
+				padding: 1rem;
+			}
 		}
 	}
 
 	.heading-tertiary {
-		margin-bottom: 1.6rem;
+		margin-bottom: 3.2rem;
 		grid-column: 1 / -1;
 		padding-bottom: 7px;
 		box-shadow: $shadow-light;
@@ -52,15 +67,18 @@
 	&__products {
 		&-container {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			width: 100%;
+			grid-template-columns: repeat(auto-fit, minmax(25rem, min-content));
 			column-gap: 1.6rem;
+			row-gap: 3.2rem;
+			justify-content: space-evenly;
 		}
 
 		&-product {
 			position: relative;
 			overflow: hidden;
-			max-height: 15vw;
-			max-width: 20vw;
+			max-height: 15rem;
+			max-width: 30rem;
 			transition: all 0.3s 0.1s;
 
 			&:hover {
@@ -79,6 +97,7 @@
 		}
 
 		&-img {
+			object-fit: cover;
 			height: 100%;
 			width: 100%;
 			border-radius: var(--border-m);

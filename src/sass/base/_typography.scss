@@ -34,6 +34,13 @@ abbr {
 .heading-primary {
 	font-size: var(--font-size-lst);
 	color: var(--color-layout-primary);
+
+	@include respond(big-table) {
+		font-size: var(--font-size-l);
+	}
+	@include respond(phone) {
+		width: 100%;
+	}
 }
 .heading-secondary {
 	font-size: var(--font-size-m);
@@ -73,9 +80,11 @@ abbr {
 .navigation {
 	&__link:link,
 	&__link:visited {
-		font-size: 2rem;
 		text-decoration: none;
 		color: #fff;
+		@include respond(big-table) {
+			color: $color-layout-primary;
+		}
 	}
 	&__link--cta:link,
 	&__link--cta:visited {
