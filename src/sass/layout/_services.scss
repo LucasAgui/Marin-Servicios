@@ -62,6 +62,11 @@
 		width: 100%;
 		margin-top: 1.6rem;
 
+		@include respond(phone) {
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
+
 		&--active {
 			display: block;
 		}
@@ -102,6 +107,15 @@
 		shape-outside: circle(50%);
 		border-radius: 50%;
 		position: relative;
+
+		@include respond(phone) {
+			width: 15rem;
+			height: 15rem;
+		}
+		@include respond(small-phone) {
+			width: 12rem;
+			height: 12rem;
+		}
 
 		img {
 			transition: filter 0.3s;

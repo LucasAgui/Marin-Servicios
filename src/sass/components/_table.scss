@@ -52,10 +52,9 @@
 			width: 25%;
 
 			@include respond(small-table) {
-				width: 20%;
+				width: 10%;
 			}
 			@include respond(phone) {
-				width: 25%;
 			}
 			&:not(:last-child) {
 				border-right: 2px solid var(--color-layout-primary);

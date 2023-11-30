@@ -11,20 +11,21 @@
 				max-content
 			);
 	}
-	@include respond(phone) {
+	@include respond(small-table) {
 		justify-items: center;
 		grid-template-columns: 1fr;
 	}
 	&__item {
 		display: grid;
-		grid-template-columns: 5rem 1fr;
+		grid-template-columns: 5rem minmax(min-content, max-content);
 		align-items: center;
 		justify-content: center;
-		justify-items: start;
+		justify-items: center;
 		gap: 0.6rem;
 
 		@include respond(big-table) {
-			grid-template-columns: 5rem 1fr;
+			grid-template-columns: 5rem minmax(min-content, 1fr);
+			justify-items: start;
 
 			&:nth-child(2) {
 				grid-row: 1 / 2;
@@ -41,7 +42,7 @@
 			}
 		}
 
-		@include respond(phone) {
+		@include respond(small-table) {
 			grid-template-columns: 5rem 30rem;
 			justify-items: start;
 			&:nth-child(2) {
@@ -69,7 +70,7 @@
 				grid-column: 3 / 4;
 				justify-self: start;
 			}
-			@include respond(phone) {
+			@include respond(small-table) {
 				justify-self: center;
 			}
 		}
@@ -84,7 +85,7 @@
 	&__link {
 		text-decoration: none;
 		color: var(--color-white);
-		font-size: var(--font-size-m);
+		font-size: var(--font-size-s);
 	}
 
 	&__btn {
