@@ -2,7 +2,16 @@
 	max-width: 120rem;
 	margin: 0 auto;
 	grid-template-rows: min-content repeat(3, min-content) min-content;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
+	p:first-child {
+		margin-bottom: 1.6rem;
+		@include respond(phone) {
+			margin-bottom: 15.6rem !important;
+		}
+	}
 	&__text {
 		background-color: var(--color-primary);
 		transform: skew(-20deg);
@@ -11,8 +20,12 @@
 		margin: 0 auto;
 		position: relative;
 		@include respond(phone) {
-			width: calc(100% - 4.8rem);
+			width: calc(100% + 3.2rem);
 			transform: skew(0);
+			position: absolute;
+			top: 3.2rem;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 		&::before {
 			content: '\201C';
@@ -23,8 +36,7 @@
 			left: -5rem;
 
 			@include respond(phone) {
-				left: -3.5rem;
-				font-size: 10rem;
+				display: none;
 			}
 		}
 
@@ -37,14 +49,8 @@
 			right: -5rem;
 			transform: rotateY(180deg);
 			@include respond(phone) {
-				right: -3.5rem;
-				font-size: 10rem;
+				display: none;
 			}
-		}
-
-		p {
-			margin-bottom: 1.6rem;
-			transform: skew(20deg);
 		}
 
 		h1 {
@@ -72,6 +78,11 @@
 			column-gap: 1.6rem;
 			row-gap: 3.2rem;
 			justify-content: space-evenly;
+
+			@media only screen and (max-width: 27.375em) {
+				grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+				justify-content: center;
+			}
 		}
 
 		&-product {
@@ -122,6 +133,10 @@
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1.6rem;
 			justify-content: start;
+
+			@include respond(big-table) {
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
 
 		&-service {
@@ -136,6 +151,11 @@
 			text-align: center;
 			background-color: rgba(#fff, 0.05);
 
+			@include respond(big-table) {
+				&:last-child {
+					grid-column: 1 / -1;
+				}
+			}
 			&:hover {
 				background-color: rgba(#fff, 0.1);
 			}
@@ -153,8 +173,8 @@
 
 	&__cta {
 		display: inline-block;
-		align-self: flex-start;
-		justify-self: start;
+		align-self: center;
+		justify-self: center;
 		padding: 1.6rem;
 		background-color: #ffe817;
 		border-radius: var(--border-s);

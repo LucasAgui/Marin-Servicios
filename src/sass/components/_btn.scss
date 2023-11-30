@@ -14,12 +14,6 @@
 	@include respond(medium-table) {
 		font-size: 2rem;
 	}
-	@include respond(small-table) {
-		font-size: 3rem;
-	}
-	@include respond(phone) {
-		font-size: 2.4rem;
-	}
 }
 
 .products .btn:not(.products__tab--active) {

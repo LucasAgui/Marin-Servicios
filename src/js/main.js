@@ -260,8 +260,9 @@ allLinks.forEach(function (link) {
 	link.addEventListener('click', function (e) {
 		const href = link.getAttribute('href');
 		// Close mobile naviagtion
-		if (link.classList.contains('nav__link')) {
-			headerEl.classList.toggle('nav-open');
+		if (link.classList.contains('navigation__link')) {
+			console.log('hola');
+			headerEl.classList.toggle('navigation-open');
 		}
 	});
 });
