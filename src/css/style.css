@@ -28,6 +28,9 @@ html {
   @media only screen and (max-width: 40em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 43.75%; } }
 
 *,
 *::before,
@@ -841,6 +844,8 @@ abbr {
         grid-column: 1 / -1; } }
     .hero__services-service:hover {
       background-color: rgba(255, 255, 255, 0.1); }
+  .hero__services-link {
+    text-decoration: none; }
   .hero__services-icon {
     height: 8rem;
     width: 8rem;

@@ -13,6 +13,9 @@ html {
 	@include respond(small-table) {
 		font-size: 50%;
 	}
+	@include respond(small-phone) {
+		font-size: 43.75%;
+	}
 }
 
 *,
