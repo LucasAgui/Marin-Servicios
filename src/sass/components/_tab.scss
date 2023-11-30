@@ -21,6 +21,10 @@
 		transition: all 0.2s;
 		font-size: 3rem;
 
+		&:hover {
+			background-color: var(--color-white);
+		}
+
 		&--active {
 			transform: translateY(-66%);
 			background-color: #fffde8;

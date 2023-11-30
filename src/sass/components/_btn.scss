@@ -18,6 +18,9 @@
 
 .products .btn:not(.products__tab--active) {
 	background-color: #ffe817;
+	&:hover {
+		background-color: rgba(#fff, 0.9);
+	}
 }
 
 .btn span {

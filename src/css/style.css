@@ -340,6 +340,8 @@ abbr {
 
 .products .btn:not(.products__tab--active) {
   background-color: #ffe817; }
+  .products .btn:not(.products__tab--active):hover {
+    background-color: rgba(255, 255, 255, 0.9); }
 
 .btn span {
   color: #212529; }
@@ -428,6 +430,8 @@ abbr {
   transform: translateY(-55%);
   transition: all 0.2s;
   font-size: 3rem; }
+  .products__tab:hover {
+    background-color: var(--color-white); }
   .products__tab--active {
     transform: translateY(-66%);
     background-color: #fffde8; }
@@ -720,7 +724,7 @@ abbr {
   display: flex;
   flex-direction: column; }
   .hero p:first-child {
-    margin-bottom: 1.6rem; }
+    margin: 1.6rem 0; }
     @media only screen and (max-width: 31em) {
       .hero p:first-child {
         margin-bottom: 15.6rem !important; } }
@@ -736,7 +740,7 @@ abbr {
         width: calc(100% + 3.2rem);
         transform: skew(0);
         position: absolute;
-        top: 3.2rem;
+        top: 4.8rem;
         left: 50%;
         transform: translateX(-50%); } }
     .hero__text::before {
@@ -850,7 +854,10 @@ abbr {
     justify-self: center;
     padding: 1.6rem;
     background-color: #ffe817;
-    border-radius: var(--border-s); }
+    border-radius: var(--border-s);
+    transition: all 0.3s; }
+    .hero__cta:hover, .hero__cta:active {
+      background-color: var(--color-white); }
 
 .products__content {
   padding: 1.6rem 4.8rem;
