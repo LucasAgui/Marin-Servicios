@@ -69,8 +69,28 @@
 
 	--section-spacing: 2.4rem;
 }
+
+@media only screen and (max-width: 1084px) {
+	:root {
+		--section-spacing: 2rem;
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	:root {
+		--section-spacing: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 464px) {
+	:root {
+		--section-spacing: 0;
+	}
+}
+
 ///////////////////////////// ((((((((((((((((((
 // SASS VARIABLES
+
 // COLORS
 $color-black: #161a30;
 $color-white: #f0ece5;
@@ -139,3 +159,8 @@ $extra-bold-text-we: 700;
 // SHADOWS
 $shadow-light-small: 0 0.2rem 1rem rgba($color-white, 0.05);
 $shadow-medium-small: 0 0.2 1rem rgba($color-white, 0.1);
+
+// BREAKPOINTS
+
+$small-desktop: 1084px;
+$small-tablet: 740px;

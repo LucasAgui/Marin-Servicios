@@ -11,9 +11,34 @@ $opciones de argumentos
 
 */
 @mixin respond($breakpoint) {
+	@if $breakpoint == small-desktop {
+		// 1088px
+		@media only screen and (max-width: 68em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tablet {
+		// 880px
+		@media only screen and (max-width: 55em) {
+			@content;
+		}
+	}
 	@if $breakpoint == small-tablet {
-		// 1076px
+		// 740px
 		@media only screen and (max-width: 46.25em) {
+			@content;
+		}
+	}
+	@if $breakpoint == phone {
+		// 592px
+		@media only screen and (max-width: 37em) {
+			@content;
+		}
+	}
+	@if $breakpoint == small-phone {
+		// 464px
+		@media only screen and (max-width: 29em) {
 			@content;
 		}
 	}

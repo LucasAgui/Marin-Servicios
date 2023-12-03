@@ -1,15 +1,31 @@
 .service {
-	padding: 4.8rem 0 4.8rem 4.8rem;
+	padding: var(--section-spacing);
+	padding-right: 0;
 	display: grid;
+	position: relative;
+
 	background-color: $color-white;
 	grid-template-columns: 3fr 25rem;
+	grid-template-rows: [primary-content-start] min-content [primary-content-end secondary-content-start] min-content [secondary-content-end];
 	border: 2px solid #fff;
 	align-items: center;
-	gap: var(--section-spacing);
+	column-gap: var(--section-spacing);
 	font-size: var(--small-text-fz);
 	z-index: 20;
 	color: var(--color-black);
 	border-radius: var(--border-radius-bigest);
+
+	@include respond(tablet) {
+		row-gap: 1.6rem;
+		grid-template-columns: 1fr;
+	}
+
+	@include respond(phone) {
+		padding: 2.4rem;
+	}
+	@include respond(phone) {
+		padding: 2.4rem;
+	}
 
 	.tertiary-heading {
 		font-weight: var(--extra-bold-text-we);
@@ -17,9 +33,11 @@
 	&__text {
 		display: grid;
 		row-gap: 1.6rem;
-		height: 100%;
-		grid-template-rows: min-content min-content 1fr [final-content-start] min-content [final-content-end];
+		grid-template-rows: min-content min-content;
 		font-weight: var(--bold-text-we);
+		@include respond(phone) {
+			grid-template-rows: min-content 1fr;
+		}
 	}
 
 	&__desc {
@@ -33,9 +51,14 @@
 		align-items: center;
 		justify-content: center;
 		background-color: $layout-color-primary-light;
-		transform: translateX(4.4rem);
+		transform: translateX(var(--section-spacing));
 		border-radius: var(--border-radius-big);
 		box-shadow: 0 2.4rem 4rem rgba($color-black, 0.2);
+
+		@include respond(tablet) {
+			width: 25rem;
+			transform: translateX(0);
+		}
 		img {
 			width: 20rem;
 			height: 20rem;
@@ -43,6 +66,8 @@
 	}
 
 	&__cta {
+		grid-row: secondary-content-start / secondary-content-start;
+		grid-column: 1 / -1;
 		align-self: start;
 		display: flex;
 		align-items: center;
@@ -55,6 +80,8 @@
 		justify-self: start;
 		border-radius: 100px;
 		transition: all 0.2s;
+		@include respond(tablet) {
+		}
 		&:hover {
 			transform: scale(1.05);
 		}

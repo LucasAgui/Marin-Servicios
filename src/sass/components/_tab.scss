@@ -1,18 +1,31 @@
 .products {
 	&__tab-container {
 		position: absolute;
-
 		top: 5px;
 		left: 50%;
 		transform: translateY(-100%) translateX(-50%);
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(4, 15vw);
+		grid-template-columns: repeat(4, 17vw);
 		justify-content: center;
 		padding: var(--section-spacing);
 		padding-top: 0;
 		padding-bottom: 0;
+		font-size: var(--smallest-text-fz);
 		column-gap: 2.4rem;
+		z-index: 50;
+
+		@include respond(small-tablet) {
+			grid-template-columns: repeat(4, 20vw);
+		}
+
+		@include respond(small-phone) {
+			width: 100%;
+			grid-template-columns: 1fr;
+			top: 0px;
+			font-size: var(--small-text-fz);
+			transform: translateY(-25%) translateX(-50%);
+		}
 	}
 
 	&__tab {
@@ -21,7 +34,6 @@
 		letter-spacing: 1.75px;
 		font-weight: var(--normal-text-we);
 		padding: 1.6rem;
-		font-size: var(--smallest-text-fz);
 		transition: all 0.2s;
 		border-bottom: 3px solid transparent;
 
@@ -44,8 +56,8 @@
 	&__content {
 		&--1 {
 			display: grid;
-			gap: var(--section-spacing);
-			grid-template-columns: repeat(auto-fit, minmax(24rem, 30rem));
+			gap: 1.6rem;
+			grid-template-columns: repeat(auto-fit, minmax(24rem, 26rem));
 			align-content: center;
 			justify-content: center;
 		}
@@ -59,4 +71,30 @@
 	color: $color-primary;
 	border-bottom: none;
 	border-bottom: 5px solid $color-primary;
+
+	@include respond(small-phone) {
+		transform: translateY(0);
+		background-color: $layout-color-primary-extra-light;
+	}
+}
+
+.open .products__tab-container {
+	background-color: $layout-color-primary-extra-light;
+}
+
+.open .products__tab:not(.products__tab--active) {
+	opacity: 1;
+	pointer-events: initial;
+	visibility: visible;
+}
+.products__tab:not(.products__tab--active) {
+	@include respond(small-phone) {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+}
+
+.products__tab--active {
+	grid-row: 1/ 2;
 }

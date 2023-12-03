@@ -11,7 +11,7 @@
 	padding: var(--section-spacing);
 	padding-left: 0;
 	padding-right: 0;
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	&__first-box {
 		display: flex;
@@ -148,6 +148,7 @@
 				padding: 2rem;
 				transition: all 0.2s;
 				box-shadow: $shadow-light-small;
+				border-radius: var(--border-radius-big);
 			}
 
 			&:hover,

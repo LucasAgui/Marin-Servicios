@@ -9,6 +9,17 @@
 html {
 	overflow-x: hidden;
 	font-size: 62.5%;
+
+	@include respond(small-desktop) {
+		font-size: 56.25%;
+	}
+
+	@include respond(small-tablet) {
+		font-size: 50%;
+	}
+	@include respond(small-phone) {
+		font-size: 43.75%;
+	}
 }
 
 body {
@@ -47,8 +58,8 @@ body {
 
 %border-gradient {
 	position: absolute;
-	left: -6px;
-	top: -6px;
+	left: -2px;
+	top: -2px;
 	background: linear-gradient(
 			to right,
 			#ffcc00,
@@ -58,13 +69,12 @@ body {
 			#ffd066,
 			#ffd17f,
 			#ffd299,
-			#ffd3b2,
-			#ffd4cc,
-			#ffd5e5,
+			#ffd59e,
+			#ffdeb3,
 			#ffa500
 		)
 		0 0 / 400% 100%;
-	width: calc(100% + 12px);
-	height: calc(100% + 12px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
 	animation: BGgradient 16s linear infinite;
 }

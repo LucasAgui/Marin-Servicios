@@ -17,4 +17,8 @@
 	justify-content: center;
 	gap: 6.8rem;
 	grid-template-columns: repeat(auto-fill, minmax(70rem, 90rem));
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
 }
