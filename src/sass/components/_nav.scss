@@ -36,7 +36,8 @@
 				align-items: center;
 				justify-content: space-between;
 				gap: 1.2rem;
-				background-color: var(--color-white);
+				background-color: var(--color-primary);
+				border-radius: var(--border-radius-small);
 				color: var(--color-black);
 				font-weight: var(--bold-text-we);
 			}

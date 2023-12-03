@@ -39,7 +39,7 @@
 body {
 	font-family: 'Montserrat';
 	line-height: 1;
-	color: var(--layout-color-primary-extra-light);
+	color: var(--color-white);
 }
 
 .link {
@@ -52,6 +52,26 @@ body {
 	font-size: var(--huge-text-fz);
 	line-height: 1.2;
 	font-weight: var(--bold-text-we);
+	color: transparent;
+
+	background: linear-gradient(
+			to right,
+			#ffcc00,
+			#ffcd19,
+			#ffce33,
+			#ffcf4c,
+			#ffd066,
+			#ffd17f,
+			#ffd299,
+			#ffd3b2,
+			#ffd4cc,
+			#ffd5e5,
+			#ffa500
+		)
+		0 0 / 400% 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: BGgradient 16s linear infinite;
 }
 
 .secondary-heading {

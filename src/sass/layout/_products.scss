@@ -1,15 +1,20 @@
 .section-products {
-	background-color: rgba($color-black, 0.95);
+	background-color: $layout-color-primary-light;
 	padding: var(--section-spacing);
 	padding-top: 9.6rem;
+	padding-bottom: 4.8rem;
 	display: flex;
 	flex-direction: column;
-	gap: 9.6rem;
+	gap: 6.4rem;
+
+	.secondary-heading {
+		text-align: center;
+	}
 }
 
 .products {
-	background-color: rgba($color-white, 1);
-	padding: var(--section-spacing);
+	position: relative;
+	background-color: $layout-color-primary-dark;
 	border-radius: var(--border-radius-huge);
 	padding-top: 0;
 	display: flex;

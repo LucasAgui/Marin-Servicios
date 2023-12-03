@@ -10,28 +10,28 @@
 
 :root {
 	// COLORS
-	--color-black: #000;
-	--color-white: #fff;
+	--color-black: #161a30;
+	--color-white: #f0ece5;
 	--row: calc(8vw + 1.6rem);
 
-	--color-primary-darkest: #bfb341;
-	--color-primary-dark: #bfb341;
-	--color-primary: #fff;
-	// --color-primary: #ffe066;
-	--color-primary-light: #ffea2e;
+	--color-primary-darkest: xxx;
+	--color-primary-dark: xxx;
+	--color-primary: #ffcc00;
+	// --color-primary: xxx;
+	--color-primary-light: xxx;
 
-	--color-secondary-dark: #073b53;
-	--color-secondary: #000;
-	--color-secondary-light: #21546c;
-	--color-secondary-extra-light: #39677d;
-	--color-secondary-lightest: #527a8d;
+	--color-secondary-dark: xxx;
+	--color-secondary: xxx;
+	--color-secondary-light: xxx;
+	--color-secondary-extra-light: xxx;
+	--color-secondary-lightest: xxx;
 
 	// LAYOUT
-	--layout-color-primary: #84a0ae;
-	--layout-color-primary-dark: #9cb3be;
-	--layout-color-primary: #b5c6ce;
-	--layout-color-primary-light: #ced9de;
-	--layout-color-primary-extra-light: #e6ecef;
+	--layout-color-primary: xxx;
+	--layout-color-primary-dark: xxx;
+	--layout-color-primary: xxx;
+	--layout-color-primary-light: xxx;
+	--layout-color-primary-extra-light: xxx;
 
 	--color-grey-dark: x;
 	--color-grey-light: x;
@@ -72,24 +72,29 @@
 ///////////////////////////// ((((((((((((((((((
 // SASS VARIABLES
 // COLORS
-$color-black: #000;
-$color-white: #fff;
+$color-black: #161a30;
+$color-white: #f0ece5;
 
-$color-primary-darkest: #bfb341;
-$color-primary-dark: #bfb341;
-$color-primary: #fff;
-$color-primary-light: #ffea2e;
+$color-primary-darkest: xxx;
+$color-primary-dark: xxx;
+$color-primary: #ffcc00;
+$color-primary-light: xxx;
 
-$color-secondary-dark: #073b53;
-$color-secondary: #08415c;
-$color-secondary-light: #21546c;
+$color-secondary-dark: xxx;
+$color-secondary: xxx;
+$color-secondary-light: xxx;
+
+//SHADES
+
+$shade-light-white: rgba(#fff, 0.03);
+$shade-medium-white: rgba(#fff, 0.05);
 
 // LAYOUT
-$layout-color-primary: #84a0ae;
-$layout-color-primary-dark: #9cb3be;
-$layout-color-primary: #b5c6ce;
-$layout-color-primary-light: #ced9de;
-$layout-color-primary-extra-light: #e6ecef;
+$layout-color-primary-extra-dark: #121526;
+$layout-color-primary-dark: #14172b;
+$layout-color-primary: #161a30;
+$layout-color-primary-light: #2d3145;
+$layout-color-primary-extra-light: #454859;
 
 //////////////////////////////////////////////////////
 
@@ -130,3 +135,7 @@ $huge-text-fz: 5rem;
 $normal-text-we: 300;
 $bold-text-we: 400;
 $extra-bold-text-we: 700;
+
+// SHADOWS
+$shadow-light-small: 0 0.2rem 1rem rgba($color-white, 0.05);
+$shadow-medium-small: 0 0.2 1rem rgba($color-white, 0.1);

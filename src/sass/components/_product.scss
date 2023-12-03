@@ -1,58 +1,57 @@
 .product {
 	position: relative;
-	padding: 1.2rem 4.8rem 2.4rem;
+	padding-bottom: 1.2rem;
 	display: flex;
-	gap: 1.6rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	border-radius: var(--border-radius-bigest);
-	background-color: rgba($color-white, 0.95);
-	color: var(--layout-color-primary-extra-light);
-	font-weight: var(--bold-text-we);
+	background-color: $shade-light-white;
+	color: var($color-white);
+	font-weight: var(--normal-text-we);
+	font-size: var(--small-text-fz);
+
 	cursor: pointer;
-	color: $color-black;
 
 	&__heading {
-		font-size: var(--medium-text-fz);
 		font-weight: var(--normal-text-we);
 	}
 	&__img {
-		width: 100%;
+		padding: 2.4rem 0 3.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		img {
 			object-fit: cover;
-			width: 100%;
-			height: 20rem;
-			border-radius: var(--border-radius-big);
+			width: 15rem;
+			height: 15rem;
+			border-radius: var(--border-radius-bigest);
 		}
 	}
 	&__text {
-		font-size: var(--small-text-fz);
+		width: 100%;
+		padding: 0 2rem;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		align-items: start;
+		gap: 1rem;
+	}
+
+	&__pricing {
+		display: flex;
+		flex-direction: column;
+		align-self: end;
+		justify-content: end;
+		align-items: end;
+		gap: 1rem;
 	}
 	&__price {
-		font-size: var(--big-text-fz);
-
 		span {
 		}
 	}
 
 	&__type {
-		position: absolute;
-		justify-self: end;
-		display: flex;
-		gap: 0.4rem;
-		align-items: center;
-		padding: 0.4rem 0.8rem;
-		background-color: rgba($color-black, 1);
-		color: $color-white;
-		border-radius: var(--border-radius-big);
-		border: 2px solid #fff;
-		font-size: var(--smallest-text-fz);
-		bottom: 0;
-		right: 0;
-		transform: translateY(50%);
+		position: relative;
 	}
 
 	&__normal,
@@ -66,10 +65,14 @@
 	}
 
 	&__normal {
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+
 		&-row {
-			width: 1.5rem;
-			height: 1.5rem;
-			fill: $color-white;
+			width: 1rem;
+			height: 1rem;
+			fill: $color-primary;
 		}
 	}
 
@@ -85,9 +88,26 @@
 		font-size: var(--small-text-fz);
 		color: var(--color-white);
 		transition: transform 0.2s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			transform: translateX(-10%);
+			width: 100%;
+			height: 2px;
+			background-color: $color-primary;
+			opacity: 0;
+			transition: all 0.2s;
+		}
 	}
 	&__cta:hover,
 	&__cta:active {
-		transform: translateX(-50%) translateY(-3px);
+		&::after {
+			opacity: 1;
+			transform: translateX(0);
+			background-color: $color-primary;
+		}
 	}
 }

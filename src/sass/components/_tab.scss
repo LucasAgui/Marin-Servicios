@@ -1,38 +1,51 @@
 .products {
 	&__tab-container {
+		position: absolute;
+
+		top: 5px;
+		left: 50%;
+		transform: translateY(-100%) translateX(-50%);
+		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 15vw);
+		justify-content: center;
+		padding: var(--section-spacing);
+		padding-top: 0;
+		padding-bottom: 0;
 		column-gap: 2.4rem;
-		margin-top: 4.8rem;
 	}
 
 	&__tab {
 		color: $color-white;
-		font-weight: var(--bold-text-we);
+		text-transform: uppercase;
+		letter-spacing: 1.75px;
+		font-weight: var(--normal-text-we);
 		padding: 1.6rem;
-		font-size: var(--medium-text-fz);
-		background-color: rgba($color-black, 1);
-		border-radius: var(--border-radius-bigest);
+		font-size: var(--smallest-text-fz);
 		transition: all 0.2s;
+		border-bottom: 3px solid transparent;
+
 		&:hover {
 			transform: translateY(-3px);
-			background-color: rgba($color-black, 0.1);
-			color: $color-secondary;
+			border-bottom: 5px solid $color-white;
 		}
 	}
 
 	&__content-container {
 		position: relative;
-		background-color: rgba($color-black, 0.95);
+		padding: var(--section-spacing);
+		padding-top: 6.4rem;
+		padding-bottom: 4.8rem;
 		border-radius: var(--border-radius-huge);
-		padding: 4.8rem;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 	}
 
 	&__content {
 		&--1 {
 			display: grid;
 			gap: var(--section-spacing);
-			grid-template-columns: repeat(auto-fill, minmax(30rem, 35rem));
+			grid-template-columns: repeat(auto-fit, minmax(24rem, 30rem));
 			align-content: center;
 			justify-content: center;
 		}
@@ -43,6 +56,7 @@
 
 .products__tab.products__tab--active {
 	transform: translateY(-3px);
-	background-color: rgba($color-black, 0.1);
-	color: $color-black;
+	color: $color-primary;
+	border-bottom: none;
+	border-bottom: 5px solid $color-primary;
 }

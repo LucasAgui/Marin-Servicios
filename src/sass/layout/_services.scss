@@ -1,14 +1,11 @@
 .section-services {
-	background-color: rgba($color-black, 0.9);
+	background-color: $layout-color-primary;
 	padding: var(--section-spacing);
 	padding-top: 9.6rem;
-	display: flex;
-	gap: 6.4rem;
-	flex-direction: column;
+	padding-bottom: 4.8rem;
 
 	.secondary-heading {
-		align-self: start;
-		grid-column: 1 / -1;
+		text-align: center;
 	}
 }
 

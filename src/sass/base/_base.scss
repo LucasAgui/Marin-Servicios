@@ -41,6 +41,30 @@ body {
 
 ::selection {
 	background-color: $color-primary;
-	color: $color-secondary;
+	color: $color-black;
 	font-weight: var(--bold-text-we);
+}
+
+%border-gradient {
+	position: absolute;
+	left: -6px;
+	top: -6px;
+	background: linear-gradient(
+			to right,
+			#ffcc00,
+			#ffcd19,
+			#ffce33,
+			#ffcf4c,
+			#ffd066,
+			#ffd17f,
+			#ffd299,
+			#ffd3b2,
+			#ffd4cc,
+			#ffd5e5,
+			#ffa500
+		)
+		0 0 / 400% 100%;
+	width: calc(100% + 12px);
+	height: calc(100% + 12px);
+	animation: BGgradient 16s linear infinite;
 }
