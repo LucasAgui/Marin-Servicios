@@ -106,15 +106,6 @@ $opciones de argumentos
 html {
   overflow-x: hidden;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68em) {
-    html {
-      font-size: 56.25%; } }
-  @media only screen and (max-width: 46.25em) {
-    html {
-      font-size: 50%; } }
-  @media only screen and (max-width: 29em) {
-    html {
-      font-size: 43.75%; } }
 
 body {
   box-sizing: border-box;
@@ -514,8 +505,9 @@ body {
     pointer-events: none;
     visibility: hidden; } }
 
-.products__tab--active {
-  grid-row: 1/ 2; }
+@media only screen and (max-width: 29em) {
+  .products__tab--active {
+    grid-row: 1/ 2; } }
 
 .header {
   top: 0;

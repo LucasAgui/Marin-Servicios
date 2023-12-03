@@ -96,5 +96,7 @@
 }
 
 .products__tab--active {
-	grid-row: 1/ 2;
+	@include respond(small-phone) {
+		grid-row: 1/ 2;
+	}
 }
