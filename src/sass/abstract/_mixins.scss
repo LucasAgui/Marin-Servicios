@@ -11,6 +11,18 @@ $opciones de argumentos
 
 */
 @mixin respond($breakpoint) {
+	@if $breakpoint == medium-desktop {
+		// 1200px
+		@media only screen and (min-width: 87.5em) {
+			@content;
+		}
+	}
+	@if $breakpoint == desktop {
+		// 1200px
+		@media only screen and (max-width: 75em) {
+			@content;
+		}
+	}
 	@if $breakpoint == small-desktop {
 		// 1088px
 		@media only screen and (max-width: 68em) {
