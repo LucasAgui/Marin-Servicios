@@ -1,32 +1,18 @@
-.products {
-	&__content {
-		padding: 1.6rem 4.8rem;
-		display: none;
-		background-color: #212529;
-		border-radius: var(--border-m);
-		&--active {
-			display: block;
-		}
-
-		@include respond(big-table) {
-			padding: 1.6rem 2.4rem;
-		}
-		@include respond(small-table) {
-			padding: 1.6rem 1rem;
-			border-radius: 0;
-		}
-	}
-
-	.products__cta {
-		padding-bottom: 1.6rem;
-	}
+.section-products {
+	background-color: rgba($color-black, 0.95);
+	padding: var(--section-spacing);
+	padding-top: 9.6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 9.6rem;
 }
 
-.products__cta {
+.products {
+	background-color: rgba($color-white, 1);
+	padding: var(--section-spacing);
+	border-radius: var(--border-radius-huge);
+	padding-top: 0;
 	display: flex;
-	&-icon {
-		width: 2.5rem;
-		height: 2.5rem;
-		fill: var(--color-primary);
-	}
+	flex-direction: column;
+	gap: 4.8rem;
 }

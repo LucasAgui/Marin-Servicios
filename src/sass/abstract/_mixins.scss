@@ -1,38 +1,19 @@
-@mixin respond($breakpoint) {
-	@if $breakpoint == small-phone {
-		// 400px
-		@media only screen and (max-width: 25em) {
-			@content;
-		}
-	}
-	@if $breakpoint == phone {
-		// 496px
-		@media only screen and (max-width: 31em) {
-			@content;
-		}
-	}
-	@if $breakpoint == small-table {
-		// 640px
-		@media only screen and (max-width: 40em) {
-			@content;
-		}
-	}
+// MEDIA QUERY MANAGER
+/*
 
-	@if $breakpoint == medium-table {
-		// 740px
-		@media only screen and (max-width: 46em) {
-			@content;
-		}
-	}
-	@if $breakpoint == big-table {
-		// 900px
-		@media only screen and (max-width: 56.25em) {
-			@content;
-		}
-	}
-	@if $breakpoint == desktop {
-		// 1072px
-		@media only screen and (max-width: 67em) {
+$opciones de argumentos
+- small-tablet
+- tablet
+- big-tablet
+- small-desktop
+- desktop
+- big-desktop
+
+*/
+@mixin respond($breakpoint) {
+	@if $breakpoint == small-tablet {
+		// 1076px
+		@media only screen and (max-width: 46.25em) {
 			@content;
 		}
 	}

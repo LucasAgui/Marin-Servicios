@@ -1,43 +1,46 @@
-/*
--Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
-
-html {
-	font-size: 62.5%;
-	box-sizing: border-box;
-
-	@include respond(small-table) {
-		font-size: 50%;
-	}
-	@include respond(small-phone) {
-		font-size: 43.75%;
-	}
-}
-
 *,
-*::before,
-*::after {
-	padding: 0;
+*::after,
+*::before {
 	margin: 0;
+	padding: 0;
 	box-sizing: inherit;
 }
 
-body {
+html {
 	overflow-x: hidden;
-	background-color: #343a40;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-size: 62.5%;
 }
 
-.logo {
-	height: 8rem;
-	width: 8rem;
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
-.section-title {
-	padding-left: 4.8rem;
+*:focus {
+	outline: none;
+	//FIXME box-shadow: 0 0 0 0.8rem $color-primary;
+}
+
+::selection {
+	//background-color: FIXME $color-primary;
+	//color: FIXME $color-white;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+}
+
+.btn {
+	border: none;
+	background: none;
+	outline: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+::selection {
+	background-color: $color-primary;
+	color: $color-secondary;
+	font-weight: var(--bold-text-we);
 }

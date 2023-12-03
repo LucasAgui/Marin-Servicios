@@ -1,12 +1,12 @@
 {
-	"name": "MarinServicios",
+	"name": "marinservicios",
 	"version": "1.0.0",
-	"description": "Distribuidor de materiales y servicios en Puerto Madryn",
+	"description": "Landing page para MarinServicios",
 	"main": "index.js",
 	"scripts": {
 		"watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
 		"start": "npm-run-all watch:sass",
-		"compile:sass": "node-sass sass/main.scss src/css/style.comp.css",
+		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
 		"concat:css": "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
 		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
 		"compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",

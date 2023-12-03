@@ -1,0 +1,36 @@
+@keyframes ctaRight {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(0.8rem);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes dblRowDown {
+	0% {
+		transform: translate(-50%, 50%);
+	}
+
+	75% {
+		transform: translate(-50%, 55%);
+	}
+
+	100% {
+		transform: translate(-50%, 50%);
+	}
+}
+
+@keyframes dblRowDownHover {
+	0% {
+		transform: translate(-50%, 50%);
+	}
+
+	100% {
+	}
+}

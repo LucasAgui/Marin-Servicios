@@ -1,43 +1,48 @@
 .products {
 	&__tab-container {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(24%, min-content));
-		justify-content: center;
-		padding: 0 1.6rem;
-		background-color: #212529;
-		transform: translateY(2px);
-		border-top-right-radius: 11px;
-		border-top-left-radius: 11px;
-		gap: 1.6rem;
-		@include respond(small-table) {
-			grid-template-columns: repeat(2, minmax(48%, min-content));
-			border-top-right-radius: 0;
-			border-top-left-radius: 0;
-		}
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2.4rem;
+		margin-top: 4.8rem;
 	}
 
 	&__tab {
-		transform: translateY(-55%);
+		color: $color-white;
+		font-weight: var(--bold-text-we);
+		padding: 1.6rem;
+		font-size: var(--medium-text-fz);
+		background-color: rgba($color-black, 1);
+		border-radius: var(--border-radius-bigest);
 		transition: all 0.2s;
-		font-size: 3rem;
-
 		&:hover {
-			background-color: var(--color-white);
+			transform: translateY(-3px);
+			background-color: rgba($color-black, 0.1);
+			color: $color-secondary;
 		}
+	}
 
-		&--active {
-			transform: translateY(-66%);
-			background-color: #fffde8;
+	&__content-container {
+		position: relative;
+		background-color: rgba($color-black, 0.95);
+		border-radius: var(--border-radius-huge);
+		padding: 4.8rem;
+	}
+
+	&__content {
+		&--1 {
+			display: grid;
+			gap: var(--section-spacing);
+			grid-template-columns: repeat(auto-fill, minmax(30rem, 35rem));
+			align-content: center;
+			justify-content: center;
 		}
 	}
 }
 
-.services {
-	&__tab {
-		&--active {
-			.service__icon:first-child {
-				background-color: var(--color-white) !important;
-			}
-		}
-	}
+// FUNCIONALIDAD
+
+.products__tab.products__tab--active {
+	transform: translateY(-3px);
+	background-color: rgba($color-black, 0.1);
+	color: $color-black;
 }

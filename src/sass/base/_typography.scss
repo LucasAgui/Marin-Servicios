@@ -1,181 +1,67 @@
+// FUENTES
+/*
 @font-face {
-	font-family: 'Roboto';
-	src: url('../media/fonts/Roboto-Regular.woff2');
-	font-weight: 400;
+	font-family: 'x';
+	src: url('/src/media/fonts/x');
+	font-weight: $normal-text-we;
+	font-style: normal;
+}
+
+*/
+// FUENTES
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../media/fonts/Montserrat-Bold.woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../media/fonts/Montserrat-Light.woff2');
+	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Roboto';
-	src: url('../media/fonts/Roboto-Medium.woff2');
-	font-weight: 500;
+	font-family: 'Montserrat';
+	src: url('../media/fonts/Montserrat-Regular.woff2');
+	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
-	font-family: 'Roboto';
-	src: url('../media/fonts/Roboto-Bold.woff2');
-	font-weight: 700;
+	font-family: 'Montserrat';
+	src: url('../media/fonts/Montserrat-ExtraBold.woff2');
+	font-weight: 800;
 	font-style: normal;
 }
 
 body {
-	font-family: 'Roboto';
-	font-weight: 400;
-	color: #fffde8;
+	font-family: 'Montserrat';
+	line-height: 1;
+	color: var(--layout-color-primary-extra-light);
 }
 
-abbr {
-	text-decoration: none;
-}
-
-/**************************/
-/* TITULOS */
-/**************************/
-
-.heading-primary {
-	font-size: var(--font-size-lst);
-	color: var(--color-layout-primary);
-
-	@include respond(big-table) {
-		font-size: var(--font-size-l);
-	}
-	@include respond(phone) {
-		width: 100%;
-	}
-}
-.heading-secondary {
-	font-size: var(--font-size-m);
-	color: #fff6a2;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	@include respond(big-table) {
-		font-size: var(--font-size-s);
-	}
-	@include respond(small-table) {
-		margin: 0 2.4rem;
-	}
-	@include respond(phone) {
-		margin: 0 0.8rem;
-	}
-}
-
-.section-heading {
-	margin-bottom: 4.8rem;
-}
-
-.heading-title {
+.link {
 	display: inline-block;
-	margin: 0 0 1.6rem 4.8rem;
+	text-decoration: none;
+	color: inherit;
 }
 
-.heading-desc {
-	display: block;
-	font-size: var(--font-size-lst);
-	color: #fff;
-	font-weight: 300;
-	text-transform: initial;
-	@include respond(big-table) {
-		font-size: var(--font-size-l);
-	}
-	@include respond(phone) {
-		font-size: var(--font-size-l);
-	}
+.primary-heading {
+	font-size: var(--huge-text-fz);
+	line-height: 1.2;
+	font-weight: var(--bold-text-we);
 }
 
-.heading-tertiary {
-	font-size: var(--font-size-m);
-	letter-spacing: 2px;
-	color: #fff;
+.secondary-heading {
+	font-size: var(--big-text-fz);
+	font-weight: var(--tiny-text-we);
+}
+
+.tertiary-heading {
+	font-size: var(--medium-text-fz);
+	font-weight: var(--normal-text-we);
+	letter-spacing: 1.75px;
 	text-transform: uppercase;
-}
-
-/**************************/
-/* HEADER SECTION */
-/**************************/
-
-.navigation {
-	&__link:link,
-	&__link:visited {
-		text-decoration: none;
-		color: #fff;
-		@include respond(big-table) {
-			color: $color-layout-primary;
-		}
-	}
-	&__link--cta:link,
-	&__link--cta:visited {
-		color: #212529;
-		background-color: #ffe817;
-		padding: 1.6rem 3.2rem;
-		text-transform: uppercase;
-		border-radius: var(--border-s);
-		font-weight: 600;
-
-		@include respond(big-table) {
-			padding: 2.4rem 3.2rem;
-			background-color: $color-layout-primary;
-			color: $color-primary;
-		}
-	}
-}
-
-/**************************/
-/* HERO SECTION */
-/**************************/
-
-.hero {
-	max-width: 120rem;
-	margin: 0 auto;
-
-	p {
-		color: var(--color-white);
-		font-size: var(--font-size-sst);
-		letter-spacing: 1px;
-		text-transform: uppercase;
-	}
-
-	&__text {
-		font-size: var(--font-size-h);
-		color: #fffde8;
-		margin-bottom: 4.8rem;
-	}
-
-	&__products {
-		&-img-desc {
-			color: var(--color-primary-light);
-			font-size: 2rem;
-			font-weight: 700;
-		}
-	}
-
-	&__services {
-		&-service {
-			p {
-				font-size: 2rem;
-				@include respond(small-phone) {
-					font-size: 1.6rem;
-				}
-			}
-		}
-	}
-
-	&__cta:link,
-	&__cta:visited {
-		font-size: 3.2rem;
-		text-decoration: none;
-		color: #212529;
-		text-transform: uppercase;
-		font-weight: 600;
-	}
-}
-
-/**************************/
-/* PRODUCTS SECTION */
-/**************************/
-
-.products {
-	&__cta {
-		font-size: 2rem;
-		color: var(--color-primary);
-		text-decoration: none;
-	}
 }

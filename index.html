@@ -1,670 +1,273 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
 			name="description"
-			content="Compañía distribuidora de materiales de construcción de calidad a domicilio, servicios de destapaciones y levantamientos." />
-		<meta
+			content="Distribución Confiable de Materiales y Servicios en Puerto Madryn, Chubut"
+			<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes, minimum-scale=1.0" />
-		<link rel="stylesheet" href="/src/css/style.css" />
+			content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="favicon.png" />
 		<title>Marin Servicios</title>
+		<link rel="stylesheet" href="src/css/style.css" />
 	</head>
 	<body>
-		<div class="fixed-link">
-			<a href="https://wa.me/+542478542750" target="_blank" class="fixed-link__whatsapp">
-				<img
-					src="src/media/imgs/whatsapp.png"
-					alt="Whatsapp image"
-					class="fixed-link__img" />
-			</a>
-		</div>
-		<!--? ----------------------------------------------------------------------------------------  NAVIGATION ------------------------------------------------------------------------------------------>
 		<header class="header">
-			<a href="#begin">
-			<img
-				src="src/media/imgs/logo.png"
-				alt="Logo de Marin Servicios"
-				class="logo" />
+			<div class="header__first-box">
+				<a href="#begin" class="link">
+					<img
+						src="favicon.png"
+						alt="Logo de Marin Servicios"
+						class="header__img header__img--logo" />
 				</a>
-			<nav class="navigation">
-				<ul class="navigation__list">
-					<li class="navigation__item">
-						<a href="#begin" target="_blank" class="navigation__link">Acerca de</a>
+				<a href="#" class="link">
+					<svg class="header__img">
+						<use href=""></use>
+					</svg>
+				</a>
+			</div>
+			<nav class="nav">
+				<ul class="nav__list list">
+					<li class="nav__item">
+						<a href="#" class="nav__link link">Productos</a>
 					</li>
-					<li class="navigation__item">
-						<a href="#section-products" class="navigation__link">Productos</a>
+					<li class="nav__item">
+						<a href="#" class="nav__link link">Servicios</a>
 					</li>
-					<li class="navigation__item">
-						<a href="#section-services" class="navigation__link">Servicios</a>
-					</li>
-					
-					<li class="navigation__item">
-						<a href="#section-contact" class="navigation__link navigation__link--cta">Contactar ahora</a>
+					<li class="nav__item nav__item--cta">
+						<a href="#" class="nav__link nav__link--cta link"
+							><span>Contáctanos</span></a
+						>
 					</li>
 				</ul>
+				<div class="nav__mobile">
+					<button class="btn nav__mobile-btn nav__mobile-btn--open">
+						<img src="src/media/imgs/menu.png" alt="Menu" />
+					</button>
+					<button class="btn nav__mobile-btn  nav__mobile-btn--close">
+						<img src="src/media/imgs/close.png" alt="Menu" />
+					</button>
+				</div>
 			</nav>
-			<div class="navigation-mobile">
-				<button class="navigation-mobile__btn navigation-mobile__btn--open">
-					<img src="src/media/imgs/menu.png" alt="" class="navigation-mobile__img">
-				</button>
-				<button class="navigation-mobile__btn navigation-mobile__btn--close">
-					<img src="src/media/imgs/close.png" alt="" class="navigation-mobile__img">
-				</button>
-			</div>
 		</header>
-		<!--? ----------------------------------------------------------------------------------------  HERO ------------------------------------------------------------------------------------------>
-		<div id="begin"></div>
+
 		<section class="section-hero">
 			<div class="hero">
-				<p>Marin Servicios</p>
-				<div class="hero__text mg-b--l">
-					<h1 class="heading-primary">
-						Materiales de construcción de calidad para cualquier proyecto
-					</h1>
-				</div>
-				<div class="hero__products mg-b--l">
-					<h3 class="heading-tertiary">Productos</h3>
-					<div class="hero__products-container">
-						<figure class="hero__products-product">
-							<a href="#section-products" class="hero__products-link">
-							<img
-								src="src/media/imgs/Granzawebp.webp"
-								alt=""
-								class="hero__products-img" />
-							<p class="hero__products-img-desc">Granza</p>
-							</a>
-						</figure>
-						<figure class="hero__products-product">
-							<a href="#section-products" class="hero__products-link">
-							<img
-								src="src/media/imgs/calcario.jpeg"
-								alt=""
-								class="hero__products-img" />
-							<p class="hero__products-img-desc">Calcario</p>
-							</a>
-						</figure>
-						<figure class="hero__products-product">
-							<a href="#section-products" class="hero__products-link">
-							<img
-								src="src/media/imgs/tierravegetal.jpg"
-								alt=""
-								class="hero__products-img" />
-							<p class="hero__products-img-desc">Tierra vegetal</p>
-							</a>
-						</figure>
-						<figure class="hero__products-product">
-							<a href="#section-products" class="hero__products-link">
-							<img
-								src="src/media/imgs/arena.webp"
-								alt=""
-								class="hero__products-img" />
-							<p class="hero__products-img-desc">Arena</p>
-							</a>
-						</figure>
+				<div class="hero__first-box">
+					<div class="hero__text">
+						<h1 class="primary-heading hero__title">
+							Distribución confiable de materiales y servicios en Puerto Madryn,
+							Chubut
+						</h1>
+						<p>Tenemos lo que buscas y lo llevamos a donde estas</p>
 					</div>
-				</div>
-				<div class="hero__services mg-b--l">
-					<h3 class="heading-tertiary">Servicios</h3>
-					<div class="hero__services-container">
-						<div class="hero__services-service">
-							<a href="#section-services" class="hero__services-link">
-							<svg class="hero__services-icon">
-								<use href="src/media/svgs/sprite.svg#destapador"></use>
-							</svg>
-							<p>Destapaciones</p>
-							</a>
+
+					<div class="hero__services">
+						<h3 class="tertiary-heading">Servicios</h3>
+						<div class="hero__services-container">
+							<div class="hero__services-img-box">
+								<a href="#" class="link">
+									<figure class="hero__services-img-box-img">
+										<p class="hero__services-img-box-img-desc">Envío</p>
+										<img src="src/media/imgs/envio.png" alt="" />
+									</figure>
+								</a>
+								<a href="#" class="link">
+									<figure class="hero__services-img-box-img">
+										<p class="hero__services-img-box-img-desc">
+											Levantamientos
+										</p>
+										<img src="src/media/imgs/levantamientos.png" alt="" />
+									</figure>
+								</a>
+								<a href="#" class="link">
+									<figure class="hero__services-img-box-img">
+										<p class="hero__services-img-box-img-desc">Destapaciones</p>
+										<img
+											class="plumber"
+											src="src/media/svgs/Plumber.svg"
+											alt="" />
+									</figure>
+								</a>
+							</div>
 						</div>
-						<div class="hero__services-service">
-							<a href="#section-services" class="hero__services-link">
-							<svg class="hero__services-icon">
-								<use href="src/media/svgs/sprite.svg#levantamientos"></use>
-							</svg>
-							<p>Levantamientos</p>
-							</a>
 						</div>
-						<div class="hero__services-service">
-							<a href="#section-services" class="hero__services-link">
-							<svg class="hero__services-icon">
-								<use href="src/media/svgs/sprite.svg#transporte"></use>
-							</svg>
-							<p>Entrega a domicilio</p>
-							</a>
+						<div class="hero__products">
+							<h3 class="tertiary-heading">Productos</h3>
+							<div class="hero__products-container">
+								<a href="#" class="hero__products-link link">Materiales</a>
+								<a href="#" class="hero__products-link link">Repuestos</a>
+								<a href="#" class="hero__products-link link">Variedad</a>
+							</div>
+						</div>
+
+						<div class="hero__cta">
+							<a href="" class="link link--cta">Contáctanos</a>
+							<a href="" class="link link">Ver más</a>
 						</div>
 					</div>
 				</div>
-				<a href="#" class="hero__cta">Contactar ahora</a>
 			</div>
 		</section>
-		<!--? ----------------------------------------------------------------------------------------  HERO ------------------------------------------------------------------------------------------>
-		<section id="section-products" class="section-products">
-			<div class="section-heading mg-b--h">
-				<h2 class="heading-secondary">
-					<span class="heading-title">Productos</span>
-					<span class="heading-desc"
-						>Ofrecemos una amplia variedad de aridos</span
-					>
+		<section class="section-services">
+			<h2 class="secondary-heading">Hacemos</h2>
+			<div class="services-container">
+				<div class="service">
+					<div class="service__text">
+						<h3 class="tertiary-heading">Envíos</h3>
+						<p class="service__desc">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
+							sunt mollitia aliquam nobis ipsa, tempore delectus sed nemo nisi
+							amet quo officiis in perferendis? Numquam aspernatur quod
+							assumenda molestias dolor?
+						</p>
+						<a href="#" class="link service__cta"
+							>Ver más
+							<svg class="service__cta-icon">
+								<use href="src/media/svgs/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+					<figure class="service__img">
+						<img src="src/media/imgs/envio.png" alt="" />
+					</figure>
+				</div>
+				<div class="service">
+					<div class="service__text">
+						<h3 class="tertiary-heading">Levantamientos</h3>
+						<p class="service__desc">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
+							sunt mollitia aliquam nobis ipsa. Lorem ipsum, dolor sit amet
+							consectetur adipisicing elit. Hic modi ex laudantium reiciendis?
+							Nemo dicta eveniet, temporibus delectus assumenda, sit asperiores
+							nostrum, impedit iure est optio tempore explicabo ut repellendus.
+						</p>
+						<a href="#" class="link service__cta"
+							>Ver más
+							<svg class="service__cta-icon">
+								<use href="src/media/svgs/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+					<figure class="service__img">
+						<img src="src/media/imgs/levantamientos.png" alt="" />
+					</figure>
+				</div>
+				<div class="service">
+					<div class="service__text">
+						<h3 class="tertiary-heading">Destapaciones</h3>
+						<p class="service__desc">
+							Tempore delectus sed nemo nisi amet quo officiis in perferendis?
+							Numquam aspernatur quod assumenda molestias dolor? Lorem ipsum
+							dolor sit amet consectetur, adipisicing elit. Nihil sunt mollitia
+							aliquam nobis ipsa.
+						</p>
+						<a href="#" class="link service__cta"
+							>Ver más
+							<svg class="service__cta-icon">
+								<use href="src/media/svgs/sprite.svg#arrow-down"></use>
+							</svg>
+						</a>
+					</div>
+					<figure class="service__img">
+						<img src="src/media/svgs/Plumber.svg" alt="" />
+					</figure>
+				</div>
 			</div>
-				</h2>
+		</section>
+		<section class="section-products">
+			<h2 class="secondary-heading">Productos</h2>
 			<div class="products">
 				<div class="products__tab-container">
 					<button
-						class="btn products__tab products__tab--1 products__tab--active"
-						data-tab="1">
-						<span>Materiales</span>
+						class="btn products__tab products-tab--1 products__tab--active ">
+						Materiales
 					</button>
-					<button class="btn products__tab products__tab--2" data-tab="2">
-						<span>-</span>
-					</button>
-					<button class="btn products__tab products__tab--3" data-tab="3">
-						<span>-</span>
-					</button>
-					<button class="btn products__tab products__tab--4" data-tab="4">
-						<span>-</span>
-					</button>
+					<button class="btn products__tab products-tab--2">Repuestos</button>
+					<button class="btn products__tab products-tab--3">Variedad</button>
 				</div>
-				<!--! ----------------------------------------------------------------------------------------  PRIMER CATEGORIA ------------------------------------------------------------------------------------------>
-				<div
-					class="products__content products__content--1 products__content--active">
-					<table class="mg-b--l table--desk">
-						<thead>
-							<tr>
-								<th>Material</th>
-								<th>Completo</th>
-								<th>Medio </th>
-								<th>Metro</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Arena</th>
-								<td>$ 45.000,00</td>
-								<td>$ 36.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Arena fina</th>
-								<td>$ 51.000,00</td>
-								<td>$ 41.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Ripio</th>
-								<td>$ 40.000,00</td>
-								<td>$ 32.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Granza</th>
-								<td>$ 40.000,00</td>
-								<td>$ 32.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Mixto</th>
-								<td>$ 44.000,00</td>
-								<td>$ 34.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Calcario</th>
-								<td>$ 35.000,00</td>
-								<td>$ 32.000,00</td>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Tierra vegetal</th>
-								<td>$ 40.000,00</td>
-								<td>$ 32.000,00</td>
-								<td>$ 0</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="mg-b--s table--mob">
-						<thead>
-							<tr>
-								<th>Material</th>
-								<th>Completo</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Arena</th>
-								<td>$ 45.000,00</td>
-							</tr>
-							<tr>
-								<th>Arena fina</th>
-								<td>$ 51.000,00</td>
-							</tr>
-							<tr>
-								<th>Ripio</th>
-								<td>$ 40.000,00</td>
-							</tr>
-							<tr>
-								<th>Granza</th>
-								<td>$ 40.000,00</td>
-							</tr>
-							<tr>
-								<th>Mixto</th>
-								<td>$ 44.000,00</td>
-							</tr>
-							<tr>
-								<th>Calcario</th>
-								<td>$ 35.000,00</td>
-							</tr>
-							<tr>
-								<th>Tierra vegetal</th>
-								<td>$ 40.000,00</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="mg-b--s table--mob">
-						<thead>
-							<tr>
-								<th>Material</th>
-								<th>Medio </th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Arena</th>
-								<td>$ 36.000,00</td>
-							</tr>
-							<tr>
-								<th>Arena fina</th>
-								<td>$ 41.000,00</td>
-							</tr>
-							<tr>
-								<th>Ripio</th>
-								<td>$ 32.000,00</td>
-							</tr>
-							<tr>
-								<th>Granza</th>
-								<td>$ 32.000,00</td>
-							</tr>
-							<tr>
-								<th>Mixto</th>
-								<td>$ 34.000,00</td>
-							</tr>
-							<tr>
-								<th>Calcario</th>
-								<td>$ 32.000,00</td>
-							</tr>
-							<tr>
-								<th>Tierra vegetal</th>
-								<td>$ 32.000,00</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="mg-b--l table--mob">
-						<thead>
-							<tr>
-								<th>Material</th>
-								<th>Metro</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Arena</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Arena fina</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Ripio</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Granza</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Mixto</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Calcario</th>
-								<td>$ 0</td>
-							</tr>
-							<tr>
-								<th>Tierra vegetal</th>
-								<td>$ 0</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="slider mg-b--m">
-						<div class="slider__gallery">
-							<div class="slide">
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/Granzawebp.webp"
-										alt="Granza"
-										class="slide__img"
-										data-tab="1" />
-									<p class="slide__text">
-										Granza
-									</p>
-								</figure>
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/calcario.jpeg"
-										alt="Calcario"
-										class="slide__img"
-										/>
-									<p class="slide__text">
-										Calcario
-									</p>
-								</figure>
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/tierravegetal.jpg"
-										alt="Arena"
-										class="slide__img"
-										data-tab="1" />
-									<p class="slide__text">
-										Tierra vegetal
-									</p>
-								</figure>
-							</div>
-							<div class="slide">
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/arena.webp"
-										alt="Arena"
-										class="slide__img"
-										data-tab="1" />
-									<p class="slide__text">
-										Arena
-									</p>
-								</figure>
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/Granzawebp.webp"
-										alt="Granza"
-										class="slide__img"
-										/>
-									<p class="slide__text">
-										Granza
-									</p>
-								</figure>
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/calcario.jpeg"
-										alt="Calcario"
-										class="slide__img"
-										data-tab="1" />
-									<p class="slide__text">
-										Calcario
-									</p>
-								</figure>
-							</div>
-							<div class="slide">
-								<figure class="slide__img-box">
-									<img
-										src="/src/media/imgs/tierravegetal.jpg"
-										alt="Tierra vegetal"
-										class="slide__img"
-										data-tab="1" />
-									<p class="slide__text">
-										Tierra vegetal
-									</p>
-								</figure>
+				<div class="products__content-container">
+					<a href="#" class="link product__cta"
+						><span>Comprar un producto</span>
+						<svg class="service__cta-icon">
+							<use href="src/media/svgs/sprite.svg#arrow-down"></use></svg
+					></a>
+					<div class="products__content products__content--1">
+						<div class="product">
+							<h4 class="product__heading">Granza</h4>
+							<figure class="product__img">
+								<img src="src/media/imgs/Granzawebp.webp" alt="" />
+							</figure>
+							<div class="product__text">
+								<span class="product__price"><span>$</span>35000</span>
+								<div class="product__type">
+									<span class="product__normal"> Medio camión </span>
+									<span class="product__alt"> Camión completo </span>
+									<svg class="product__normal-row">
+										<use
+											href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+									</svg>
+								</div>
 							</div>
 						</div>
-						<button class="slider__btn slider__btn--left">
-								<svg class="slider__icon">
-									<use href="/src/media/svgs/sprite.svg#arrow-left"></use>
-								</svg>
-							</button>
-							<button class="slider__btn slider__btn--right">
-								<svg class="slider__icon">
-									<use href="/src/media/svgs/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
+						<div class="product">
+							<h4 class="product__heading">Arena</h4>
+							<figure class="product__img">
+								<img src="src/media/imgs/arena.jpg" alt="" />
+							</figure>
+							<div class="product__text">
+								<span class="product__price"><span>$</span>45000</span>
+								<div class="product__type">
+									<span class="product__normal"> Medio camión </span>
+									<span class="product__alt"> Camión completo </span>
+									<svg class="product__normal-row">
+										<use
+											href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="product">
+							<h4 class="product__heading">Calcario</h4>
+							<figure class="product__img">
+								<img src="src/media/imgs/calcario.jpeg" alt="" />
+							</figure>
+							<div class="product__text">
+								<span class="product__price"><span>$</span>25000</span>
+								<div class="product__type">
+									<span class="product__normal"> Medio camión </span>
+									<span class="product__alt"> Camión completo </span>
+									<svg class="product__normal-row">
+										<use
+											href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="product">
+							<h4 class="product__heading">Tierra vegetal</h4>
+							<figure class="product__img">
+								<img src="src/media/imgs/calcario.jpeg" alt="" />
+							</figure>
+							<div class="product__text">
+								<span class="product__price"><span>$</span>20000</span>
+								<div class="product__type">
+									<span class="product__normal"> Medio camión </span>
+									<span class="product__alt"> Camión completo </span>
+									<svg class="product__normal-row">
+										<use
+											href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
 					</div>
-					<a href="#" class="products__cta">Consultar <svg class="products__cta-icon"><use href="src/media/svgs/sprite.svg#arrow-south"></use></svg> </a>
+					<div class="products__content products__content--2"></div>
+					<div class="products__content products__content--3"></div>
 				</div>
-				<!--! ----------------------------------------------------------------------------------------  SEGUNDA CATEGORIA ------------------------------------------------------------------------------------------>
-				<div class="products-content products-content--2"></div>
-				<!--! ----------------------------------------------------------------------------------------  TERCERA CATEGORIA ------------------------------------------------------------------------------------------>
-				<div class="products-content products-content--3"></div>
-				<!--! ----------------------------------------------------------------------------------------  CUARTA CATEGORIA ------------------------------------------------------------------------------------------>
-				<div class="products-content products-content--4"></div>
 			</div>
 		</section>
-		<!--? ----------------------------------------------------------------------------------------  HERO ------------------------------------------------------------------------------------------>
-
-		<section id="section-services" class="section-services">
-			<div class="section-heading">
-				<h2 class="heading-secondary">
-					<span class="heading-title">Servicios</span>
-					<span class="heading-desc"
-						>Ofrecemos una amplia variedad de servicios</span
-					>
-			</div>
-
-			<div class="services">
-          <div class="services__tab-container">
-            <button class="services__btn services__tab services__tab--1" data-tab="1">
-              <svg class="service__icon">
-								<use href="/src/media/svgs/sprite.svg#destapador"></use>
-							</svg>
-              <p class="service__header">Destapaciones</p>
-							<svg class="service__icon service__icon--1">
-								<use href="/src/media/svgs/sprite.svg#row-right"></use>
-							</svg>
-            </button>
-      <!--! ----------------------------------------------------------------------------------------  PRIMER CATEGORIA ------------------------------------------------------------------------------------------>
-            <div class="services__content services__content--1"> 
-							<figure class="service__img">
-								<img src="/src/media/imgs/destapador.jpg" alt="" class="service__img">
-								<figcaption>El destapador</figcaption>
-							</figure>
-              <div class="service__text-box">
-                <p class="service__desc">Ofrecemos... Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati eum voluptates libero quas modi quae praesentium dolore nam deleniti dicta iure nostrum mollitia molestias, commodi facere ipsam quaerat officia?</p>
-              </div>
-						<div class="services__cta">
-								<a href="#" class="products__cta"><span>Consultar</span> <svg class="products__cta-icon"><use href="src/media/svgs/sprite.svg#arrow-south"></use></svg> </a>
-							</div>
-            </div>
-      <!--! ----------------------------------------------------------------------------------------  SEGUNDA CATEGORIA ------------------------------------------------------------------------------------------>
-            <button class="services__btn services__tab services__tab--2" data-tab="2">
-							<svg class="service__icon">
-								<use href="/src/media/svgs/sprite.svg#levantamientos"></use>
-							</svg>
-              <p class="service__header">Levantamientos</p>
-							<svg class="service__icon service__icon--2">
-								<use href="/src/media/svgs/sprite.svg#row-right"></use>
-							</svg>
-            </button>
-            <div class="services__content services__content--2"> 
-							<figure class="service__img">
-								<img src="/src/media/imgs/destapador.jpg" alt="" class="service__img">
-								<figcaption>Levantamientos</figcaption>
-							</figure>
-              <div class="service__text-box">
-                <p class="service__desc">Ofrecemos... Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati eum voluptates libero quas modi quae praesentium dolore nam deleniti dicta iure nostrum mollitia molestias, commodi facere ipsam quaerat officia?</p>
-              </div>
-							<div class="services__cta">
-								<a href="#" class="products__cta"><span>Consultar</span> <svg class="products__cta-icon"><use href="src/media/svgs/sprite.svg#arrow-south"></use></svg> </a>
-							</div>
-            </div>
-      <!--! ----------------------------------------------------------------------------------------  TERCER CATEGORIA ------------------------------------------------------------------------------------------>
-
-            <button class="services__btn services__tab services__btn--last services__tab--3" data-tab="3">
-              <svg class="service__icon">
-								<use href="/src/media/svgs/sprite.svg#transporte"></use>
-							</svg>
-              <p class="service__header">Entrega a domicilio</p>
-              <svg class="service__icon service__icon--3">
-								<use href="/src/media/svgs/sprite.svg#row-right"></use>
-							</svg>
-            </button>
-            <div class="services__content services__content--3">
-							<figure class="service__img">
-								<img src="/src/media/imgs/destapador.jpg" alt="" class="service__img">
-								<figcaption>Entrega a domicilio</figcaption>
-							</figure>
-              <div class="service__text-box">
-                <p class="service__desc">Ofrecemos... Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati eum voluptates libero quas modi quae praesentium dolore nam deleniti dicta iure nostrum mollitia molestias, commodi facere ipsam quaerat officia?</p>
-              </div>
-							<div class="services__cta">
-								<a href="#" class="products__cta"><span>Consultar</span> <svg class="products__cta-icon"><use href="src/media/svgs/sprite.svg#arrow-south"></use></svg> </a>
-							</div>
-
-            </div>
-          </div>
-			</div>
-		</section>
-		<section class="section-contact" id="section-contact">
-       <div class="section-heading">
-				<h2 class="heading-secondary">
-					<span class="heading-title">Contacto</span>
-					<span class="heading-desc"
-						>¿Cómo podemos ayudarte?</span
-					>
-			</div>
-          <div class="contact">
-            <div class="text-container">
-              <div class="help help__tab-container mg-b--l">
-                <button class="help__btn help__tab help__tab--1" data-tab="1">
-                  <div class="help__text-box">
-                  <h4 class="help__title">
-                    Me gustaría contratar un servicio
-                  </h4>
-                  <p class="help__text">
-                    Descubre como contratar uno de nuestros servicios.
-                  </p>
-                  </div>
-                  <div class="help__img-box">
-                    <svg class="help__icon">
-											<use href="src/media/svgs/sprite.svg#row-right"></use>
-										</svg>
-                  </div>
-                </button>
-
-								<div class="help__content help__content--1"> 
-								</div>
-                  <button class="help__btn help__tab help__tab--2" data-tab="2">
-                  <div class="help__text-box">
-                  <h4 class="help__title">
-                    Quiero comprar un producto
-                  </h4>
-                  <p class="help__text">
-                    Para saber más sobre envios y medios de pago.
-                  </p>
-                  </div>
-                  <div class="help__img-box">
-										<svg class="help__icon">
-											<use href="src/media/svgs/sprite.svg#row-right"></use>
-										</svg>
-                  </div>
-                </button>
-
-								<div class="help__content help__content--2"> 
-								</div>
-
-              </div>
-								 <h3 class="contact__information mg-b--m">Información de contacto</h3>
-              <div class="information">
-                  <div class="information__box">
-										<svg class="information__icon">
-											<use href="src/media/svgs/sprite.svg#location"></use>
-										</svg>
-                    <a href="https://maps.app.goo.gl/WzHAcr9fd2prwAg39" target="_blank" class="information__link information__link--call">Puerto Madryn<br>Calle Inventada Vej 90A, 8200Aarthus</a>
-                  </div>
-                  <div class="information__box">
-                    <svg class="information__icon">
-											<use href="src/media/svgs/sprite.svg#call"></use>
-										</svg>
-                    <a href="call=" class="information__link information__link--call">+54 2478 5329121</a>
-                  </div>
-                  <div class="information__box">
-                    <svg class="information__icon">
-											<use href="src/media/svgs/sprite.svg#mail"></use>
-										</svg>
-										<button id="btn-email" class="information__btn information__btn--email">
-												<span id="email">contacto@marinservicios.com</span>
-												<svg class="information__btn--email-icon">
-													<use href="src/media/svgs/sprite.svg#copy"></use>
-												</svg> 
-										</button>
-                  </div>
-              </div>
-            </div>
-              <div class="form-container">
-								<h4 class="form-container__title mg-b--m">Envianos tu consulta</h4>
-                <form action="#" class="form">
-                  <div class="form__input-box-name">
-                    <div class="form__input-box">
-											<input class="form__input" type="text" id="name" placeholder="Nombre">
-											<label for="name" class="form__label">Nombre <span>*</span></label>
-                    </div>
-                    <div class="form__input-box">
-											<input class="form__input" type="text" id="apellido" placeholder="Apellido">
-											<label for="name" class="form__label">Apellido</label>
-                    </div>
-                  </div>
-                    <div class="form__input-box">
-											<input class="form__input" type="email" id="email" placeholder="Correo electrónico">
-											<label for="email" class="form__label">Correo electrónico <span>*</span></label>
-                    </div>
-                    <div class="form__input-box">
-											<input class="form__input" type="text" id="mensaje" placeholder="Mensaje">
-											<label for="mensaje" class="form__label">Mensaje <span>*</span></label>
-                    </div>
-                    <div class="form__input-box">
-											<textarea class="form__input" name="text" id="details" cols="30" rows="1" placeholder="Detalles adicionales"></textarea>
-											<label for="details" class="form__label">Detalles adicionales</label>
-                    </div>
-                <button type="submit" class="form__btn">Enviar</button>
-              </form>
-            </div>
-          </div>
-      </section>
-			<footer class="footer">
-				<div class="footer__item">
-					<svg class="footer__icon">
-						<use href="src/media/svgs/sprite.svg#location"></use>
-					</svg>
-					<a  href="https://maps.app.goo.gl/WzHAcr9fd2prwAg39" target="_blank" class="footer__link">Puerto Madryn<br>Calle Inventada Vej 90A, 8200Aarthus</a>
-				</div>
-				<div class="footer__item">
-					<svg class="footer__icon">
-						<use href="src/media/svgs/sprite.svg#call"></use>
-					</svg>
-					<a href="call=" class="footer__link">+54 2478 5329121</a>
-				</div>
-
-				<div class="footer__item">
-					<svg class="footer__icon">
-						<use href="src/media/svgs/sprite.svg#mail"></use>
-					</svg>
-					<button id="btn-email" class="footer__btn footer__btn--email">
-						<span id="email">contacto@marinservicios.com</span>
-						<svg class="footer__btn--email-icon">
-							<use href="src/media/svgs/sprite.svg#copy"></use>
-						</svg> 
-					</button>
-				</div>
-
-				<div class="footer__item footer__item--social">
-					
-					<a href="#" class="footer__link"><img src="src/media/imgs/facebook.png" alt="Facebook" class="footer__img"></a>
-					<a href="#" class="footer__link"><img src="src/media/imgs/instagram.png" alt="Instagram" class="footer__img"></a>
-					<a href="#" class="footer__link"><img src="src/media/imgs/telegram.png" alt="Telegram" class="footer__img"></a>
-				</div>
-
-				<div class="footer__location">
-					<iframe class="footer__location-iframe" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2880.617848968372!2d-69.357224!3d-43.780791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDQ2JzUwLjkiUyA2OcKwMjEnMjYuMCJX!5e0!3m2!1ses-419!2sar!4v1700777305027!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<p class="copyright">
-					Marin Servicios &copy; 2023 por Lucas Aguirre. Todos los derechos reservados.
-				</p>
-			</footer>
-		<script src="/src/js/main.js"></script>
+		<script src="src/js/main.js"></script>
 	</body>
 </html>

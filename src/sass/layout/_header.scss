@@ -1,13 +1,32 @@
 .header {
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 1.6rem 2.4rem;
-	height: 10rem;
-	background-color: #212529;
+	z-index: 200;
+	position: fixed;
+	background-color: var(--color-secondary);
+	height: 8rem;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	z-index: 100;
+	padding: 1.6rem;
+
+	&__first-box {
+		display: flex;
+		gap: 1.2rem;
+
+		.link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__img {
+		height: 4.8rem;
+		width: 4.8rem;
+		&--logo {
+			height: 8rem;
+			width: 8rem;
+		}
+	}
 }

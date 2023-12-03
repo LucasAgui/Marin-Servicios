@@ -1,37 +1,132 @@
-:root {
-	// COLOR
-	--color-primary: #ffe817;
-	--color-primary-light: #fffad1;
+/*
+-Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-	--color-layout-light: #343a40;
-	--color-layout-primary: #212529;
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 156
+*/
+///////////////////////////// ((((((((((((((((((
+// CSS VARIABLES
+
+:root {
+	// COLORS
 	--color-black: #000;
 	--color-white: #fff;
+	--row: calc(8vw + 1.6rem);
 
-	// BORDER-RADIUSd
+	--color-primary-darkest: #bfb341;
+	--color-primary-dark: #bfb341;
+	--color-primary: #fff;
+	// --color-primary: #ffe066;
+	--color-primary-light: #ffea2e;
 
-	--border-b: 11px;
-	--border-m: 5px;
-	--border-s: 3px;
+	--color-secondary-dark: #073b53;
+	--color-secondary: #000;
+	--color-secondary-light: #21546c;
+	--color-secondary-extra-light: #39677d;
+	--color-secondary-lightest: #527a8d;
 
-	// BOX-SHADOW
-	// --shadow-light: 0 2px 0 rgba(#fff, 0.5);
+	// LAYOUT
+	--layout-color-primary: #84a0ae;
+	--layout-color-primary-dark: #9cb3be;
+	--layout-color-primary: #b5c6ce;
+	--layout-color-primary-light: #ced9de;
+	--layout-color-primary-extra-light: #e6ecef;
 
-	// FONT-SIZES
-	--font-size-sst: 1.4rem;
-	--font-size-s: 1.6rem;
-	--font-size-m: 2.4rem;
-	--font-size-l: 3rem;
-	--font-size-lst: 4.8rem;
-	--font-size-h: 6.2rem;
+	--color-grey-dark: x;
+	--color-grey-light: x;
+
+	// FILTERS
+
+	// BORDER RADIUS
+
+	--border-radius-small: 3px;
+	--border-radius-medium: 5px;
+	--border-radius-big: 9px;
+	--border-radius-bigest: 15px;
+	--border-radius-huge: 20px;
+
+	// FONT SIZES
+
+	--smallest-text-fz: 1.2rem;
+	--small-text-fz: 1.8rem;
+	--normal-text-fz: 2.2rem;
+	--medium-text-fz: 2.6rem;
+	--intermedium-text-fz: 3rem;
+	--big-text-fz: 3.4rem;
+	--bigest-text-fz: 4rem;
+	--huge-text-fz: 5rem;
+	// FONT WEIGHTS
+
+	--tiny-text-we: 300;
+	--normal-text-we: normal;
+	--bold-text-we: 600;
+	--extra-bold-text-we: 800;
+
+	// BOX SHADOWS
+
+	// SPACING
+
+	--section-spacing: 2.4rem;
 }
-// COLOR
-$color-primary: #ffe817;
+///////////////////////////// ((((((((((((((((((
+// SASS VARIABLES
+// COLORS
+$color-black: #000;
+$color-white: #fff;
 
-$color-layout-light: #343a40;
-$color-layout-primary: #212529;
+$color-primary-darkest: #bfb341;
+$color-primary-dark: #bfb341;
+$color-primary: #fff;
+$color-primary-light: #ffea2e;
 
-// BOX-SHADOW
-$shadow-light: 0 2px 0 rgba(#fff, 0.5);
-$shadow-dark: 0 2px 0 $color-layout-primary;
-$shadow-primary: 0 2px 0 $color-primary;
+$color-secondary-dark: #073b53;
+$color-secondary: #08415c;
+$color-secondary-light: #21546c;
+
+// LAYOUT
+$layout-color-primary: #84a0ae;
+$layout-color-primary-dark: #9cb3be;
+$layout-color-primary: #b5c6ce;
+$layout-color-primary-light: #ced9de;
+$layout-color-primary-extra-light: #e6ecef;
+
+//////////////////////////////////////////////////////
+
+// DARK MODE
+
+// GREYS
+// $color-grey-dark: x;
+// $color-grey-light: x;
+
+// LAYOUT
+
+// $layout-color-primary: x;
+// $layout-color-primary-light: x;
+// $layout-color-primary-extra-light: x;
+
+// COLORS
+//////////////////////////////////////////////////////
+
+// FILTERS
+
+// BORDER RADIUS
+
+$border-radius-small: 3px;
+$border-radius-medium: 5px;
+$border-radius-big: 9px;
+
+// FONT SIZES
+
+$small-text-fz: 1.8rem;
+$normal-text-fz: 2.2rem;
+$medium-text-fz: 2.6rem;
+$intermedium-text-fz: 3rem;
+$big-text-fz: 3.4rem;
+$bigest-text-fz: 4rem;
+$huge-text-fz: 5rem;
+// FONT WEIGHTS
+
+$normal-text-we: 300;
+$bold-text-we: 400;
+$extra-bold-text-we: 700;

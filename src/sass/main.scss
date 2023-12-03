@@ -5,22 +5,15 @@
 @import 'base/animations';
 @import 'base/base';
 @import 'base/typography';
-@import 'base/utilities';
 
-@import 'components/fixed-whatsapp';
-@import 'components/navigation';
-@import 'components/btn';
-@import 'components/table';
+@import 'components/nav';
+@import 'components/service';
+@import 'components/product';
 @import 'components/tab';
-@import 'components/slider';
-@import 'components/form';
-@import 'components/help-card';
 
 @import 'layout/header';
 @import 'layout/hero';
-@import 'layout/products';
 @import 'layout/services';
-@import 'layout/contact';
-@import 'layout/footer';
+@import 'layout/products';
 
 @import 'pages/home';
