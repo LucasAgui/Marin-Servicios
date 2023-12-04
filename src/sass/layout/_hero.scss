@@ -7,27 +7,33 @@
 
 .hero {
 	margin: 0 auto;
+	height: 100%;
 	display: flex;
-	padding: var(--section-spacing);
+	flex-direction: column;
+	align-items: center;
+	padding: 2.4rem;
 	padding-left: 0;
 	padding-right: 0;
 	width: 90%;
 	text-align: center;
-	&__first-box {
-		display: flex;
-		height: 100%;
-		flex-direction: column;
-		align-items: center;
+
+	@include respond(tablet) {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		justify-content: center;
+		padding: 0 2.4rem;
 		gap: 1.6rem;
+		text-align: center;
 
 		p {
-			font-size: var(--small-text-fz);
+			font-size: 4vw;
 			font-weight: var(--tiny-text-we);
 		}
 	}
@@ -36,7 +42,6 @@
 		position: relative;
 		display: flex;
 		width: 100%;
-		max-width: 100rem;
 		flex-direction: column;
 		gap: var(--section-spacing);
 
@@ -44,6 +49,9 @@
 			content: '';
 			@extend %border-gradient;
 			border-radius: var(--border-radius-big);
+			@include respond(tablet) {
+				border-radius: 0;
+			}
 		}
 		&-container {
 			display: flex;
@@ -59,13 +67,27 @@
 		&-img-box {
 			display: grid;
 			width: 100%;
-			grid-template-columns: repeat(auto-fit, 30vw);
+			grid-template-columns: repeat(3, minmax(25vw, 1fr));
 			justify-content: center;
 			justify-items: center;
 			column-gap: 2.4rem;
-			gap: 4.8rem;
 			padding: 3.2rem 3.2rem 4.8rem;
 			border-radius: var(--border-radius-big);
+
+			@include respond(small-tablet) {
+				column-gap: 1.6rem;
+				padding: 1.6rem 1.3rem 4.8rem;
+			}
+
+			@include respond(phone) {
+				row-gap: 3.2rem;
+				grid-template-columns: repeat(auto-fit, 45vw);
+				grid-template-rows: 45vw 45vw;
+			}
+
+			@include respond(tiny-phone) {
+				grid-template-columns: repeat(auto-fit, 90vw);
+			}
 
 			a {
 				width: 100%;
@@ -73,6 +95,12 @@
 				background-color: $shade-light-white;
 				border-radius: var(--border-radius-big);
 				transition: all 0.2s;
+
+				@include respond(phone) {
+					&:last-child {
+						grid-column: 1 / -1;
+					}
+				}
 				&:hover {
 					background-color: $shade-medium-white;
 					transform: translateY(-3px);
@@ -90,6 +118,7 @@
 				border-radius: var(--border-radius-big);
 				box-shadow: $shadow-light-small;
 				transition: box-shadow 0.2s;
+
 				&-desc {
 					position: absolute;
 					background-color: $color-primary;
@@ -101,16 +130,24 @@
 					text-transform: uppercase;
 					text-align: center;
 					width: 100%;
+
 					pointer-events: none;
 					color: $layout-color-primary;
 
 					@include respond(medium-desktop) {
 						font-size: var(--normal-text-fz);
 					}
+					@include respond(small-tablet) {
+						height: 3.2rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 1.8rem;
+					}
 				}
 
 				img {
-					object-fit: cover;
+					object-fit: contain;
 					width: 100%;
 					height: 100%;
 					transition: all 0.2s;
@@ -122,20 +159,21 @@
 	&__products {
 		position: relative;
 		width: 100%;
-		max-width: 100rem;
 		display: flex;
 		flex-direction: column;
-		gap: var(--section-spacing);
+		gap: 2.4rem;
+		@include respond(small-tablet) {
+			gap: 1.6rem;
+		}
 
 		&::after {
 			content: '';
 			@extend %border-gradient;
 			border-radius: var(--border-radius-big);
-		}
-
-		.tertiary-heading {
-			grid-column: 1 / -1;
-			z-index: 5;
+			@include respond(tablet) {
+				border-radius: 0;
+				width: 120%;
+			}
 		}
 
 		&-container {
@@ -148,14 +186,22 @@
 			padding: 3.2rem;
 			border-radius: var(--border-radius-big);
 			z-index: 5;
+
+			@include respond(phone) {
+				padding: 1.6rem;
+
+				grid-template-columns: repeat(3, 28vw);
+			}
 		}
 		&-link {
 			&:link,
 			&:visited {
-				display: block;
-				font-size: 2.5vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 4vw;
 				background-color: $shade-light-white;
-				padding: 2rem;
+				padding: 3.2rem 2.4rem;
 				transition: all 0.2s;
 				box-shadow: $shadow-light-small;
 				border-radius: var(--border-radius-big);

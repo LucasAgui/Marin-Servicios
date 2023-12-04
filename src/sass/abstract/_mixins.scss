@@ -54,4 +54,10 @@ $opciones de argumentos
 			@content;
 		}
 	}
+	@if $breakpoint == tiny-phone {
+		// 464px
+		@media only screen and (max-width: 29em) {
+			@content;
+		}
+	}
 }
