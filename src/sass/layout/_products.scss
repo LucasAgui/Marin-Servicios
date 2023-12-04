@@ -1,5 +1,6 @@
 .section-products {
-	background-color: $layout-color-primary-light;
+	background-color: $layout-color-primary-dark;
+
 	padding-top: 9.6rem;
 	display: flex;
 	flex-direction: column;
@@ -12,7 +13,7 @@
 
 .products {
 	position: relative;
-	background-color: $layout-color-primary-dark;
+	background-color: $layout-color-primary;
 	border-radius: var(--border-radius-huge);
 	padding-top: 0;
 	display: flex;

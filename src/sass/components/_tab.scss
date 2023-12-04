@@ -54,12 +54,25 @@
 	}
 
 	&__content {
+		display: none;
+
+		&--falso {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 30vh;
+			font-size: 10vw;
+		}
 		&--1 {
-			display: grid;
+			display: none;
 			gap: 1.6rem;
 			grid-template-columns: repeat(auto-fit, minmax(24rem, 26rem));
 			align-content: center;
 			justify-content: center;
+
+			@include respond(phone) {
+				grid-template-columns: repeat(auto-fit, 85vw);
+			}
 		}
 	}
 }
@@ -99,4 +112,9 @@
 	@include respond(small-phone) {
 		grid-row: 1/ 2;
 	}
+}
+
+// Funcionalidad content
+.products__content--active.products__content {
+	display: grid;
 }

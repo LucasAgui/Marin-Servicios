@@ -10,16 +10,22 @@ let productTabActive = Array.from(
 const productsTabs = Array.from(document.querySelectorAll('.products__tab'));
 const tabContainerEl = document.querySelector('.products__tab-container');
 const allProductsTabs = Array.from(document.querySelectorAll('.products__tab'));
+const productsContent = document.querySelectorAll('.products__content');
 
 productsTabs.forEach((e) =>
 	e.addEventListener('click', function (e) {
 		const clicked = e.target.closest('.products__tab');
 		if (!clicked.classList.contains('products__tab--active')) {
-			console.log('b');
 			allProductsTabs.forEach((e) =>
 				e.classList.remove('products__tab--active')
 			);
 			clicked.classList.add('products__tab--active');
+			productsContent.forEach((e) =>
+				e.classList.remove('products__content--active')
+			);
+			document
+				.querySelector(`.products__content--${clicked.dataset.tab}`)
+				.classList.add('products__content--active');
 			productsEl.classList.remove('open');
 
 			productTabActive = clicked;
@@ -92,4 +98,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		requestAnimationFrame(scroll);
 	}
+});
+/////////////////////////////////////////////////////////////////////
+// Mobile navigation
+
+const btnMobileEl = document.querySelector('.nav__mobile');
+const headerEl = document.querySelector('.header');
+
+btnMobileEl.addEventListener('click', function () {
+	headerEl.classList.toggle('nav-open');
+	document.body.classList.add('sticky');
+});
+
+const allLinks = document.querySelectorAll('a:link');
+
+allLinks.forEach(function (link) {
+	link.addEventListener('click', function (e) {
+		const href = link.getAttribute('href');
+		// Close mobile naviagtion
+		if (link.classList.contains('nav__link')) {
+			headerEl.classList.toggle('nav-open');
+		}
+	});
 });

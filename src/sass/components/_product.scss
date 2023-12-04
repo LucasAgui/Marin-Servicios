@@ -10,9 +10,15 @@
 	color: var($color-white);
 	font-weight: var(--normal-text-we);
 	font-size: var(--small-text-fz);
+	transition: background-color 0.2s;
 
-	cursor: pointer;
+	@include respond(phone) {
+		font-size: var(--big-text-fz);
+	}
 
+	&:hover {
+		background-color: $shade-medium-white;
+	}
 	&__heading {
 		font-weight: var(--normal-text-we);
 	}
@@ -21,11 +27,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include respond(phone) {
+			padding: 2.4rem 0 2.4rem;
+		}
 		img {
 			object-fit: cover;
 			width: 15rem;
 			height: 15rem;
 			border-radius: var(--border-radius-bigest);
+
+			@include respond(phone) {
+				object-fit: cover;
+				width: 25rem;
+				height: 20rem;
+			}
 		}
 	}
 	&__text {
@@ -35,6 +50,11 @@
 		justify-content: space-between;
 		align-items: start;
 		gap: 1rem;
+
+		@include respond(phone) {
+			width: 90%;
+			margin-bottom: 3.2rem !important;
+		}
 	}
 
 	&__pricing {
@@ -52,6 +72,10 @@
 
 	&__type {
 		position: relative;
+		cursor: pointer;
+		@include respond(phone) {
+			font-size: var(--normal-text-fz);
+		}
 	}
 
 	&__normal,
@@ -70,9 +94,10 @@
 		gap: 0.2rem;
 
 		&-row {
-			width: 1rem;
-			height: 1rem;
+			width: 2rem;
+			height: 2rem;
 			fill: $color-primary;
+			transform: translateY(10%);
 		}
 	}
 
@@ -82,7 +107,7 @@
 		display: flex;
 		align-items: center;
 		gap: 0.4rem;
-		top: 1.2rem;
+		top: 2.4rem;
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: var(--small-text-fz);
