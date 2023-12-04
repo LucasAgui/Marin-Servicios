@@ -6,6 +6,10 @@
 	gap: 2vh;
 	padding: 1rem;
 
+	@include respond(small-phone) {
+		gap: 1rem;
+	}
+
 	&__input {
 		width: 100%;
 		padding: 2.4rem 4.8rem;
@@ -16,6 +20,10 @@
 		font-size: var(--normal-text-fz);
 		transition: all 0.2s;
 
+		@include respond(small-phone) {
+			padding: 2.4rem 1rem;
+			font-size: var(--small-text-fz);
+		}
 		&--subject {
 			grid-column: 1 / -1;
 		}
