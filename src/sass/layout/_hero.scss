@@ -33,9 +33,18 @@
 		gap: 1.6rem;
 		text-align: center;
 
+		@include respond(phone) {
+			padding: 0 1rem;
+		}
 		p {
-			font-size: 4vw;
+			font-size: var(--bigest-text-fz);
 			font-weight: var(--tiny-text-we);
+			@include respond(tablet) {
+				font-size: var(--bigest-text-fz);
+			}
+			@include respond(small-tablet) {
+				font-size: 2rem;
+			}
 		}
 	}
 
@@ -68,7 +77,9 @@
 		&-img-box {
 			display: grid;
 			width: 100%;
+			height: 100%;
 			grid-template-columns: repeat(3, minmax(25vw, 1fr));
+			grid-template-rows: repeat(auto-fit, 25vw);
 			justify-content: center;
 			justify-items: center;
 			column-gap: 2.4rem;
@@ -83,16 +94,18 @@
 			@include respond(phone) {
 				row-gap: 3.2rem;
 				grid-template-columns: repeat(auto-fit, 45vw);
-				grid-template-rows: 45vw 45vw;
+				grid-template-rows: repeat(auto-fill, 45vw);
+				align-content: center;
+				padding: 1.6rem 1.3rem 3.2rem;
 			}
 
 			@include respond(tiny-phone) {
 				grid-template-columns: repeat(auto-fit, 90vw);
+
+				padding: 1.6rem 1.3rem 1.6rem;
 			}
 
 			a {
-				width: 100%;
-				height: 100%;
 				background-color: $shade-light-white;
 				border-radius: var(--border-radius-big);
 				transition: all 0.2s;
@@ -102,6 +115,7 @@
 						grid-column: 1 / -1;
 					}
 				}
+
 				&:hover {
 					background-color: $shade-medium-white;
 					transform: translateY(-3px);
@@ -112,6 +126,9 @@
 				}
 			}
 			&-img {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				height: 100%;
 				width: 100%;
 				position: relative;
@@ -151,8 +168,15 @@
 				img {
 					object-fit: contain;
 					width: 100%;
-					height: 100%;
+					height: 25vw;
 					transition: all 0.2s;
+					padding: 2.4rem;
+					@include respond(phone) {
+						height: 45vw;
+					}
+					@include respond(tiny-phone) {
+						width: 80vw;
+					}
 				}
 			}
 		}
@@ -219,27 +243,37 @@
 		}
 	}
 	&__cta {
-		justify-self: center;
-		width: 50%;
-		display: grid;
-		grid-template-columns: 1fr minmax(max-content, 1fr);
-		gap: 1.6rem;
-		font-size: var(--medium-text-fz);
+		display: flex;
+		width: 100%;
 		align-items: center;
+		justify-self: center;
 		justify-content: center;
-		@include respond(tiny-phone) {
-			width: 100%;
-			grid-template-columns: min-content;
+		gap: 2.4rem;
+		font-size: var(--bigest-text-fz);
+		text-align: center;
+		@include respond(small-tablet) {
+			font-size: var(--medium-text-fz);
+		}
+
+		@include respond(phone) {
+			width: 60%;
+			flex-direction: column;
+			gap: 1.6rem;
 		}
 
 		.link {
 			&:link,
 			&:visited {
-				padding: 1.6rem 3.2rem;
-				border: 3px solid var(--color-white);
+				display: flex;
+				justify-content: center;
 				border-radius: var(--border-radius-medium);
-
+				padding: 2.4rem 4.8rem;
 				transition: all 0.2s;
+
+				@include respond(phone) {
+					padding: 3.2rem 0;
+					width: 100%;
+				}
 			}
 
 			&:hover,
@@ -252,7 +286,6 @@
 				color: var(--color-black);
 				background-color: var(--color-primary);
 				font-weight: var(--bold-text-we);
-				border: 3px solid transparent;
 			}
 		}
 	}

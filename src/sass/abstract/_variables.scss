@@ -79,12 +79,14 @@
 @media only screen and (max-width: 740px) {
 	:root {
 		--section-spacing: 1.6rem;
+		--huge-text-fz: 4.8rem;
 	}
 }
 
 @media only screen and (max-width: 464px) {
 	:root {
 		--section-spacing: 0;
+		--huge-text-fz: 4rem;
 	}
 }
 
@@ -113,7 +115,7 @@ $shade-medium-white: rgba(#fff, 0.05);
 $layout-color-primary-extra-dark: #121526;
 $layout-color-primary-dark: #14172b;
 $layout-color-primary: #161a30;
-$layout-color-primary-light: #2d3145;
+$layout-color-primary-light: #1c213b;
 $layout-color-primary-extra-light: #454859;
 
 //////////////////////////////////////////////////////

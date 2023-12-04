@@ -80,8 +80,11 @@ body {
 }
 
 .tertiary-heading {
-	font-size: var(--medium-text-fz);
+	font-size: var(--big-text-fz);
 	font-weight: var(--normal-text-we);
 	letter-spacing: 1.75px;
 	text-transform: uppercase;
+	@include respond(phone) {
+		font-weight: var(--big-text-we);
+	}
 }

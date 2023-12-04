@@ -7,7 +7,6 @@
 	background-color: $color-white;
 	grid-template-columns: 3fr 25rem;
 	grid-template-rows: [primary-content-start] min-content [primary-content-end secondary-content-start] min-content [secondary-content-end];
-	border: 2px solid #fff;
 	align-items: center;
 	column-gap: var(--section-spacing);
 	font-size: var(--small-text-fz);
