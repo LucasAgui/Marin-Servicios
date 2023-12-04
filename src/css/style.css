@@ -316,7 +316,7 @@ body {
     background-color: #2d3145;
     transform: translateX(var(--section-spacing));
     border-radius: var(--border-radius-big);
-    box-shadow: 0 2.4rem 4rem rgba(22, 26, 48, 0.2); }
+    box-shadow: 0 1rem 2rem rgba(22, 26, 48, 0.2); }
     @media only screen and (max-width: 55em) {
       .service__img {
         width: 25rem;
@@ -335,10 +335,15 @@ body {
     grid-row: final-content-start / -1;
     color: #ffcc00;
     background-color: #161a30;
-    padding: 1rem;
+    padding: 1.6rem 3.2rem;
     justify-self: start;
     border-radius: 100px;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    box-shadow: 0 1rem 2rem rgba(22, 26, 48, 0.2); }
+    @media only screen and (max-width: 37em) {
+      .service__cta {
+        width: 50%;
+        padding: 2rem 0; } }
     .service__cta:hover {
       transform: scale(1.05); }
     .service__cta-icon {

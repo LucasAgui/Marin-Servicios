@@ -30,13 +30,13 @@
 			<nav class="nav">
 				<ul class="nav__list list">
 					<li class="nav__item">
-						<a href="#" class="nav__link link">Productos</a>
+						<a href="#section-services" class="nav__link link">Servicios</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__link link">Servicios</a>
+						<a href="#section-products" class="nav__link link">Productos</a>
 					</li>
 					<li class="nav__item nav__item--cta">
-						<a href="#" class="nav__link nav__link--cta link"
+						<a href="#section-products" class="nav__link nav__link--cta link"
 							><span>Contáctanos</span></a
 						>
 					</li>
@@ -51,7 +51,7 @@
 				</div>
 			</nav>
 		</header>
-
+		<div id="begin"></div>
 		<section class="section-hero">
 			<div class="hero">
 					<div class="hero__text  mg-b--l">
@@ -65,13 +65,13 @@
 					<div class="hero__services mg-b--l">
 						<div class="hero__services-container">
 							<div class="hero__services-img-box">
-								<a href="#" class="link">
+								<a href="#envios" class="link">
 									<figure class="hero__services-img-box-img">
 										<p class="hero__services-img-box-img-desc">Envío</p>
 										<img src="src/media/imgs/envio.png" alt="" />
 									</figure>
 								</a>
-								<a href="#" class="link">
+								<a href="#levantamientos" class="link">
 									<figure class="hero__services-img-box-img">
 										<p class="hero__services-img-box-img-desc">
 											Levantamientos
@@ -79,7 +79,7 @@
 										<img src="src/media/imgs/levantamientos.png" alt="" />
 									</figure>
 								</a>
-								<a href="#" class="link">
+								<a href="#destapaciones" class="link">
 									<figure class="hero__services-img-box-img">
 										<p class="hero__services-img-box-img-desc">Destapaciones</p>
 										<img
@@ -94,23 +94,23 @@
 						<h3 class="tertiary-heading mg-b--s">Productos</h3>
 						<div class="hero__products mg-b--l">
 							<div class="hero__products-container">
-								<a href="#" class="hero__products-link link">Materiales</a>
-								<a href="#" class="hero__products-link link">Repuestos</a>
-								<a href="#" class="hero__products-link link">Variedad</a>
+								<a href="#section-products" class="hero__products-link link">Materiales</a>
+								<a href="#section-products" class="hero__products-link link">Repuestos</a>
+								<a href="#section-products" class="hero__products-link link">Variedad</a>
 							</div>
 						</div>
 
 						<div class="hero__cta">
-							<a href="" class="link link--cta">Contáctanos</a>
-							<a href="" class="link link">Ver más</a>
+							<a href="#section-products" class="link link--cta">Contáctanos</a>
+							<a href="#section-services" class="link link">Ver más</a>
 						</div>
 					</div>
 				</div>
 		</section>
-		<section class="section-services">
+		<section class="section-services" id="section-services">
 			<h2 class="secondary-heading mg-b--h">Nuestros servicios</h2>
 			<div class="services-container">
-				<div class="service">
+				<div class="service" id="envios">
 					<div class="service__text">
 						<h3 class="tertiary-heading">Envíos</h3>
 						<p class="service__desc">
@@ -131,7 +131,7 @@
 							</svg>
 						</a>
 				</div>
-				<div class="service">
+				<div class="service" id="levantamientos">
 					<div class="service__text">
 						<h3 class="tertiary-heading">Levantamientos</h3>
 						<p class="service__desc">
@@ -153,7 +153,7 @@
 							</svg>
 						</a>
 				</div>
-				<div class="service">
+				<div class="service" id="destapaciones">
 					<div class="service__text">
 						<h3 class="tertiary-heading">Destapaciones</h3>
 						<p class="service__desc">
@@ -177,7 +177,7 @@
 				
 			</div>
 		</section>
-		<section class="section-products">
+		<section class="section-products" id="section-products">
 			<h2 class="secondary-heading mg-b--s">Nuestros productos</h2>
 			<div class="products">
 				<div class="products__tab-container">
