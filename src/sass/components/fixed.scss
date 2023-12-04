@@ -1,0 +1,27 @@
+.fixed {
+	position: fixed;
+	right: 2.4rem;
+	bottom: 2.4rem;
+	z-index: 500;
+	box-shadow: 0 1rem 2.4rem rgba($color-black, 0.5);
+	border-radius: 50%;
+
+	&__link {
+		width: 6rem;
+		height: 6rem;
+		background-color: $color-primary;
+		padding: 1rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		border: 5px solid $color-primary-dark;
+		justify-content: center;
+	}
+
+	&__icon {
+		width: 6rem;
+		height: 4rem;
+		fill: $layout-color-primary;
+		color: $layout-color-primary;
+	}
+}

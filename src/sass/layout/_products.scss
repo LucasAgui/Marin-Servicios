@@ -5,6 +5,10 @@
 	flex-direction: column;
 	gap: 6.4rem;
 
+	@include respond(phone) {
+		padding: 6.4rem 0 2.4rem;
+	}
+
 	.secondary-heading {
 		text-align: center;
 	}
@@ -19,8 +23,7 @@
 	flex-direction: column;
 	gap: 4.8rem;
 
-	@include respond(small-phone) {
-		border-top-right-radius: 0;
-		border-top-left-radius: 0;
+	@include respond(phone) {
+		border-radius: 0;
 	}
 }

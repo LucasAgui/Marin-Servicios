@@ -52,7 +52,8 @@
 		gap: 1rem;
 
 		@include respond(phone) {
-			width: 90%;
+			width: 100%;
+			padding: 0 1.6rem;
 			margin-bottom: 3.2rem !important;
 		}
 	}
@@ -116,9 +117,6 @@
 			font-size: var(--small-text-fz);
 			color: var(--color-white);
 			transition: transform 0.2s;
-
-			@include respond(tiny-phone) {
-			}
 
 			span {
 				display: block;

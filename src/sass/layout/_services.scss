@@ -3,7 +3,9 @@
 	padding: var(--section-spacing);
 	padding-top: 9.6rem;
 	padding-bottom: 4.8rem;
-
+	@include respond(phone) {
+		padding: 6.4rem 0 2.4rem;
+	}
 	.secondary-heading {
 		text-align: center;
 	}
@@ -16,7 +18,7 @@
 	justify-items: center;
 	justify-content: center;
 	gap: 6.8rem;
-	grid-template-columns: repeat(auto-fill, minmax(50rem, 90rem));
+	grid-template-columns: repeat(auto-fill, minmax(min-content, 90rem));
 
 	@include respond(phone) {
 		grid-template-columns: 1fr;

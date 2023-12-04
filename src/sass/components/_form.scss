@@ -40,7 +40,7 @@
 
 		&--submit {
 			background-color: $color-primary;
-			padding: 2.4rem 0;
+			padding: 1.6rem 0;
 			width: 100%;
 			color: $layout-color-primary;
 			font-weight: var(--bold-text-we);
@@ -48,7 +48,7 @@
 			letter-spacing: 1.75px;
 			border-radius: var(--border-radius-big);
 			font-family: inherit;
-			font-size: var(--normal-text-fz);
+			font-size: var(--medium-text-fz);
 			transition: all 0.2s;
 			grid-column: 1 / -1;
 

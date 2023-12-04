@@ -60,6 +60,9 @@
 		border-radius: var(--border-radius-huge);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+		@include respond(phone) {
+			border-radius: 0;
+		}
 	}
 
 	&__content {
