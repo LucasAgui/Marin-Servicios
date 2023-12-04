@@ -1128,9 +1128,12 @@ body {
       .contact__dir {
         font-size: 1.6rem; } }
   .contact__map {
-    width: 100%;
+    width: 70%;
     height: 20rem;
     border-radius: var(--border-radius-big); }
+    @media only screen and (max-width: 55em) {
+      .contact__map {
+        width: 100%; } }
 
 .footer {
   background-color: #121526;

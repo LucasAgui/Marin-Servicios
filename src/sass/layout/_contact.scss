@@ -119,8 +119,11 @@
 	}
 
 	&__map {
-		width: 100%;
+		width: 70%;
 		height: 20rem;
 		border-radius: var(--border-radius-big);
+		@include respond(tablet) {
+			width: 100%;
+		}
 	}
 }
