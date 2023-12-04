@@ -256,9 +256,7 @@
 		}
 
 		@include respond(phone) {
-			width: 60%;
-			flex-direction: column;
-			gap: 1.6rem;
+			width: 90%;
 		}
 
 		.link {

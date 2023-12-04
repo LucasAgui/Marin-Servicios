@@ -11,13 +11,11 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(min-content, 30vw));
 		row-gap: 2.4rem;
-
 		align-content: center;
 		justify-items: center;
 		justify-content: center;
 		@include respond(tablet) {
 			grid-template-columns: repeat(2, minmax(min-content, 45vw));
-			text-align: center;
 			row-gap: 3.2rem;
 		}
 	}
@@ -29,20 +27,23 @@
 			margin-bottom: 2.4rem;
 			font-weight: var(--normal-text-we);
 			color: $color-primary;
+
+			@include respond(small-phone) {
+				font-size: 1.6rem;
+			}
 		}
 	}
 
 	&__list {
-		font-size: var(--normal-text-fz);
+		font-size: var(--small-text-fz);
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
 		align-items: start;
 		gap: 1.6rem;
 
-		@include respond(tablet) {
-			justify-content: center;
-			align-items: center;
+		@include respond(small-phone) {
+			font-size: 1.4rem;
 		}
 		&-item {
 		}
@@ -54,24 +55,43 @@
 	&__last-item {
 		width: 100%;
 		grid-column: 1 / -1;
-		display: flex;
-		justify-content: space-between;
-		align-items: end;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(min-content, 30vw));
+		align-content: end;
+		justify-content: start;
 		font-size: var(--small-text-fz);
+		@include respond(tablet) {
+			display: grid;
+		}
 	}
 
 	&__logo {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		align-items: start;
+		justify-content: start;
+		text-align: start;
+		@include respond(tablet) {
+			width: 45vw;
+		}
 		&-text {
 			color: #ffe817;
 			font-weight: var(--bold-text-we);
+			display: block;
+			width: 100%;
 		}
 		img {
 			width: 8rem;
 			height: 8rem;
+		}
+	}
+	&__copyright {
+		grid-column: 3;
+		align-self: end;
+		@include respond(tablet) {
+			width: 45vw;
+			display: flex;
+			justify-content: start;
 		}
 	}
 }
