@@ -121,3 +121,29 @@ allLinks.forEach(function (link) {
 		}
 	});
 });
+
+/////////////////////////////////////////////////////////////////////
+// Products camión functionality
+
+/*
+const products = document.querySelectorAll('.product');
+const productTypes = document.querySelectorAll('.product__type');
+const productsTypesAlt = document.querySelector('.product__alt');
+
+productTypes.forEach((e) =>
+	e.addEventListener('click', function (e) {
+		const clicked = e.target.closest('.product__type');
+		console.log(clicked);
+		document
+			.querySelector(`.product--${clicked.dataset.tab}`)
+			.classList.toggle('open');
+	})
+);
+
+productsTypesAlt.forEach((e) =>
+	addEventListener('click', (e) => {
+		const clicked = e.target.closest('.product__type');
+		console.log(clicked);
+	})
+);
+*/

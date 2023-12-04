@@ -82,17 +82,23 @@
 	&__normal,
 	&__alt {
 		display: block;
+		padding: 0.8rem;
 	}
 	&__alt {
-		position: absolute;
-		opacity: 0;
-		display: none;
+		&:hover {
+			background-color: $shade-large-white;
+		}
 	}
 
 	&__normal {
 		display: flex;
 		align-items: center;
 		gap: 0.2rem;
+		transition: all 0.2s;
+
+		&:hover {
+			background-color: $shade-large-white;
+		}
 
 		&-row {
 			width: 2rem;
@@ -145,5 +151,24 @@
 				}
 			}
 		}
+	}
+}
+
+// Funcionalidad
+
+.product__alt {
+	opacity: 0;
+	pointer-events: none;
+	visibility: 0;
+}
+.open .product__type {
+	background-color: $shade-large-white;
+}
+
+.open .product__type {
+	.product__alt {
+		opacity: 1;
+		pointer-events: initial;
+		visibility: visible;
 	}
 }
