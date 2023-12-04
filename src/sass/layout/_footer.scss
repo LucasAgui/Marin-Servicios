@@ -50,4 +50,28 @@
 		&-link {
 		}
 	}
+
+	&__last-item {
+		width: 100%;
+		grid-column: 1 / -1;
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		font-size: var(--small-text-fz);
+	}
+
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&-text {
+			color: #ffe817;
+			font-weight: var(--bold-text-we);
+		}
+		img {
+			width: 8rem;
+			height: 8rem;
+		}
+	}
 }
