@@ -6,6 +6,7 @@
 }
 
 .hero {
+	position: relative;
 	margin: 0 auto;
 	height: 100%;
 	display: grid;
@@ -288,51 +289,27 @@
 		}
 	}
 	&__cta {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
 		display: flex;
-		width: 100%;
 		align-items: center;
-		justify-self: center;
 		justify-content: center;
-		gap: 2.4rem;
-		font-size: var(--bigest-text-fz);
-		text-align: center;
-		@include respond(small-tablet) {
-			font-size: var(--medium-text-fz);
+		animation: dblRowDown 1s infinite;
+
+		&-link {
+			display: inline-block;
+			width: 8rem;
+			height: 8em;
 		}
-
-		@include respond(phone) {
-			width: 90%;
-		}
-
-		.link {
-			&:link,
-			&:visited {
-				display: flex;
-				justify-content: center;
-				border-radius: var(--border-radius-medium);
-				padding: 2.4rem 4.8rem;
-				transition: all 0.2s;
-				border: 3px solid $color-white;
-
-				@include respond(phone) {
-					padding: 3.2rem 0;
-					width: 100%;
-				}
-			}
-
-			&:hover,
-			&:active {
-				transform: translateY(-3px);
-			}
-
-			&--cta:link,
-			&--cta:visited {
-				border: 3px solid $color-primary;
-
-				color: var(--color-black);
-				background-color: var(--color-primary);
-				font-weight: var(--bold-text-we);
-			}
+		&-icon {
+			padding: 1rem;
+			width: 8rem;
+			height: 8em;
+			fill: $layout-color-primary;
+			background-color: $color-primary;
+			border-radius: 50%;
 		}
 	}
 }
