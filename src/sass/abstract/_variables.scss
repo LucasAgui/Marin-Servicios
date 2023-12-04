@@ -55,7 +55,7 @@
 	--intermedium-text-fz: 3rem;
 	--big-text-fz: 3.4rem;
 	--bigest-text-fz: 4rem;
-	--huge-text-fz: 7vw;
+	--huge-text-fz: 5.6rem;
 	// FONT WEIGHTS
 
 	--tiny-text-we: 300;
@@ -68,6 +68,18 @@
 	// SPACING
 
 	--section-spacing: 2.4rem;
+}
+
+@media only screen and (min-width: 1400px) {
+	:root {
+		--huge-text-fz: 6.4rem;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	:root {
+		--huge-text-fz: 8.6rem;
+	}
 }
 
 @media only screen and (max-width: 1084px) {
@@ -86,7 +98,6 @@
 @media only screen and (max-width: 464px) {
 	:root {
 		--section-spacing: 0;
-		--huge-text-fz: 4rem;
 	}
 }
 

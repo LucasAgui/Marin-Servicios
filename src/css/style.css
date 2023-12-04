@@ -37,12 +37,20 @@
   --intermedium-text-fz: 3rem;
   --big-text-fz: 3.4rem;
   --bigest-text-fz: 4rem;
-  --huge-text-fz: 7vw;
+  --huge-text-fz: 5.6rem;
   --tiny-text-we: 300;
   --normal-text-we: normal;
   --bold-text-we: 600;
   --extra-bold-text-we: 800;
   --section-spacing: 2.4rem; }
+
+@media only screen and (min-width: 1400px) {
+  :root {
+    --huge-text-fz: 6.4rem; } }
+
+@media only screen and (min-width: 1700px) {
+  :root {
+    --huge-text-fz: 8.6rem; } }
 
 @media only screen and (max-width: 1084px) {
   :root {
@@ -55,8 +63,7 @@
 
 @media only screen and (max-width: 464px) {
   :root {
-    --section-spacing: 0;
-    --huge-text-fz: 4rem; } }
+    --section-spacing: 0; } }
 
 /*
 
@@ -795,7 +802,7 @@ body {
           font-size: var(--bigest-text-fz); } }
       @media only screen and (max-width: 46.25em) {
         .hero__text p {
-          font-size: 2rem; } }
+          font-size: 2.4rem; } }
   .hero__services {
     position: relative;
     display: flex;
