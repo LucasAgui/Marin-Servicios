@@ -6,6 +6,9 @@
 	gap: 2vh;
 	padding: 1rem;
 
+	@include respond(small-tablet) {
+		padding: 0;
+	}
 	@include respond(small-phone) {
 		gap: 1rem;
 	}

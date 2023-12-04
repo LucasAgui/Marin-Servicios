@@ -77,6 +77,10 @@ body {
 .secondary-heading {
 	font-size: var(--big-text-fz);
 	font-weight: var(--tiny-text-we);
+
+	@include respond(small-phone) {
+		margin-top: 1.6rem;
+	}
 }
 
 .tertiary-heading {

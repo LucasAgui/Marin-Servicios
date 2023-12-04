@@ -269,6 +269,7 @@
 				border-radius: var(--border-radius-medium);
 				padding: 2.4rem 4.8rem;
 				transition: all 0.2s;
+				border: 3px solid $color-white;
 
 				@include respond(phone) {
 					padding: 3.2rem 0;
@@ -283,6 +284,8 @@
 
 			&--cta:link,
 			&--cta:visited {
+				border: 3px solid $color-primary;
+
 				color: var(--color-black);
 				background-color: var(--color-primary);
 				font-weight: var(--bold-text-we);

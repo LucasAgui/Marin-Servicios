@@ -18,6 +18,7 @@
 	row-gap: 4.8rem;
 	column-gap: 2.4rem;
 	align-items: center;
+	align-content: center;
 	justify-content: center;
 
 	@include respond(small-phone) {

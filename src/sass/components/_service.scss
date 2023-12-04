@@ -22,8 +22,8 @@
 	@include respond(phone) {
 		padding: 2.4rem;
 	}
-	@include respond(phone) {
-		padding: 2.4rem;
+	@include respond(small-phone) {
+		border-radius: 0;
 	}
 
 	.tertiary-heading {

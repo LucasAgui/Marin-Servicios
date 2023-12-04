@@ -23,7 +23,7 @@
 			width: 100%;
 			grid-template-columns: 1fr;
 			top: 0px;
-			font-size: var(--small-text-fz);
+			font-size: var(--normal-text-fz);
 			transform: translateY(-25%) translateX(-50%);
 		}
 	}
@@ -36,7 +36,16 @@
 		padding: 1.6rem;
 		transition: all 0.2s;
 		border-bottom: 3px solid transparent;
+		@include respond(phone) {
+			padding: 2rem 0;
+		}
+		@include respond(small-phone) {
+			font-weight: var(--bold-text-we);
+			font-size: var(--normal-text-fz);
 
+			letter-spacing: 2px;
+			height: 8rem;
+		}
 		&:hover {
 			transform: translateY(-3px);
 			border-bottom: 5px solid $color-white;
@@ -92,7 +101,8 @@
 }
 
 .open .products__tab-container {
-	background-color: $layout-color-primary-extra-light;
+	background-color: rgba($layout-color-primary, 0.9);
+	backdrop-filter: blur(10px);
 }
 
 .open .products__tab:not(.products__tab--active) {
