@@ -487,8 +487,8 @@ body {
       .product__type {
         font-size: var(--normal-text-fz); } }
   .product__normal, .product__alt {
-    display: block;
-    padding: 0.8rem; }
+    padding: 0.8rem;
+    display: block; }
   .product__alt:hover {
     background-color: rgba(255, 255, 255, 0.09); }
   .product__normal {
@@ -512,11 +512,17 @@ body {
     gap: 0.4rem;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 29em) {
+      .product__cta {
+        top: 12rem; } }
     .product__cta:link, .product__cta:visited {
       transform: translateX(-50%);
       font-size: var(--small-text-fz);
       color: var(--color-white);
       transition: transform 0.2s; }
+      @media only screen and (max-width: 37em) {
+        .product__cta:link, .product__cta:visited {
+          font-size: var(--normal-text-fz); } }
       .product__cta:link span, .product__cta:visited span {
         display: block;
         position: relative; }
@@ -539,7 +545,7 @@ body {
 .product__alt {
   opacity: 0;
   pointer-events: none;
-  visibility: 0; }
+  visibility: hidden; }
 
 .open .product__type {
   background-color: rgba(255, 255, 255, 0.09); }
@@ -570,10 +576,11 @@ body {
   @media only screen and (max-width: 29em) {
     .products__tab-container {
       width: 100%;
+      height: 100%;
       grid-template-columns: 1fr;
       top: 0px;
       font-size: var(--normal-text-fz);
-      transform: translateY(-25%) translateX(-50%); } }
+      transform: translateY(0) translateX(-50%); } }
 
 .products__tab {
   color: #f0ece5;
@@ -607,6 +614,9 @@ body {
   @media only screen and (max-width: 37em) {
     .products__content-container {
       border-radius: 0; } }
+  @media only screen and (max-width: 29em) {
+    .products__content-container {
+      padding-top: 18rem; } }
 
 .products__content {
   display: none; }
@@ -625,6 +635,19 @@ body {
     @media only screen and (max-width: 37em) {
       .products__content--1 {
         grid-template-columns: repeat(auto-fit, 85vw); } }
+
+.products__tab-arrow-down {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem; }
+  @media only screen and (max-width: 29em) {
+    .products__tab-arrow-down {
+      display: block;
+      z-index: 20;
+      pointer-events: none; } }
 
 .products__tab.products__tab--active {
   transform: translateY(-3px);

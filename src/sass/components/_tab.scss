@@ -21,10 +21,12 @@
 
 		@include respond(small-phone) {
 			width: 100%;
+			height: 100%;
+
 			grid-template-columns: 1fr;
 			top: 0px;
 			font-size: var(--normal-text-fz);
-			transform: translateY(-25%) translateX(-50%);
+			transform: translateY(0) translateX(-50%);
 		}
 	}
 
@@ -60,8 +62,13 @@
 		border-radius: var(--border-radius-huge);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+
 		@include respond(phone) {
 			border-radius: 0;
+		}
+
+		@include respond(small-phone) {
+			padding-top: 18rem;
 		}
 	}
 
@@ -85,6 +92,20 @@
 			@include respond(phone) {
 				grid-template-columns: repeat(auto-fit, 85vw);
 			}
+		}
+	}
+
+	&__tab-arrow-down {
+		display: none;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		right: 2.4rem;
+		top: 2.4rem;
+		@include respond(small-phone) {
+			display: block;
+			z-index: 20;
+			pointer-events: none;
 		}
 	}
 }

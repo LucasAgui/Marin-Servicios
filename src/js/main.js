@@ -125,7 +125,6 @@ allLinks.forEach(function (link) {
 /////////////////////////////////////////////////////////////////////
 // Products camión functionality
 
-/*
 const products = document.querySelectorAll('.product');
 const productTypes = document.querySelectorAll('.product__type');
 const productsTypesAlt = document.querySelector('.product__alt');
@@ -146,4 +145,3 @@ productsTypesAlt.forEach((e) =>
 		console.log(clicked);
 	})
 );
-*/

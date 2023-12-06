@@ -66,10 +66,6 @@
 		align-items: end;
 		gap: 1rem;
 	}
-	&__price {
-		span {
-		}
-	}
 
 	&__type {
 		position: relative;
@@ -81,8 +77,8 @@
 
 	&__normal,
 	&__alt {
-		display: block;
 		padding: 0.8rem;
+		display: block;
 	}
 	&__alt {
 		&:hover {
@@ -117,12 +113,20 @@
 		gap: 0.4rem;
 		align-items: center;
 		justify-content: center;
+
+		@include respond(small-phone) {
+			top: 12rem;
+		}
 		&:link,
 		&:visited {
 			transform: translateX(-50%);
 			font-size: var(--small-text-fz);
 			color: var(--color-white);
 			transition: transform 0.2s;
+
+			@include respond(phone) {
+				font-size: var(--normal-text-fz);
+			}
 
 			span {
 				display: block;
@@ -159,7 +163,7 @@
 .product__alt {
 	opacity: 0;
 	pointer-events: none;
-	visibility: 0;
+	visibility: hidden;
 }
 .open .product__type {
 	background-color: $shade-large-white;
