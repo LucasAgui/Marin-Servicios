@@ -14,6 +14,7 @@
 		font-size: var(--smallest-text-fz);
 		column-gap: 2.4rem;
 		z-index: 50;
+		transition: all 0.2s;
 
 		@include respond(small-tablet) {
 			grid-template-columns: repeat(4, 20vw);
@@ -24,6 +25,8 @@
 			height: 100%;
 
 			grid-template-columns: 1fr;
+			grid-template-rows: repeat(auto-fit, 10rem);
+
 			top: 0px;
 			font-size: var(--normal-text-fz);
 			transform: translateY(0) translateX(-50%);

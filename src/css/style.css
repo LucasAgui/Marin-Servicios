@@ -569,7 +569,8 @@ body {
   padding-bottom: 0;
   font-size: var(--smallest-text-fz);
   column-gap: 2.4rem;
-  z-index: 50; }
+  z-index: 50;
+  transition: all 0.2s; }
   @media only screen and (max-width: 46.25em) {
     .products__tab-container {
       grid-template-columns: repeat(4, 20vw); } }
@@ -578,6 +579,7 @@ body {
       width: 100%;
       height: 100%;
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, 10rem);
       top: 0px;
       font-size: var(--normal-text-fz);
       transform: translateY(0) translateX(-50%); } }
