@@ -5,11 +5,12 @@
 	width: 100%;
 	z-index: 200;
 	position: fixed;
-	background-color: #14172b;
+	background-color: #555;
 	height: 8rem;
 	display: flex;
 	justify-content: space-between;
 	padding: 1.6rem;
+	align-items: center;
 
 	&__first-box {
 		display: flex;

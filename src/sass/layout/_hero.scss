@@ -29,6 +29,7 @@
 		p {
 			font-size: var(--bigest-text-fz);
 			font-weight: var(--tiny-text-we);
+			line-height: var(--line-height-small);
 			@include respond(tablet) {
 				font-size: var(--bigest-text-fz);
 			}
@@ -41,7 +42,7 @@
 	&__services {
 		grid-column: secondary-content-start / content-end;
 		display: grid;
-		grid-template-columns: repeat(3, minmax(22rem, 30rem));
+		grid-template-columns: repeat(3, minmax(22rem, 45rem));
 		width: 100%;
 		justify-content: center;
 		column-gap: 2.4rem;
@@ -77,11 +78,19 @@
 			}
 
 			&-img {
-				width: 6.4rem;
-				height: 6.4rem;
+				width: 15rem;
+				height: 15rem;
 				background-color: $layout-color-primary;
 				border-radius: 50%;
 				padding: 1rem;
+
+				@include respond(tablet) {
+					align-self: center;
+				}
+
+				@include respond(phone) {
+					align-self: start;
+				}
 			}
 			&-title {
 				font-size: var(--normal-text-fz);
@@ -89,6 +98,7 @@
 			&-desc {
 				font-size: var(--small-text-fz);
 				font-weight: var(--bold-text-we);
+				line-height: var(--line-height-small);
 			}
 		}
 
