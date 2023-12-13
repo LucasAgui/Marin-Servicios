@@ -17,6 +17,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 	row-gap: 4.8rem;
+	column-gap: 2.4rem;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
@@ -28,6 +29,7 @@
 		gap: 4.8rem;
 	}
 	&__first-box {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: start;
@@ -59,6 +61,12 @@
 	}
 
 	&__item {
+		@include respond(small-phone) {
+			justify-content: center;
+			text-align: center;
+			width: 100%;
+		}
+
 		&--1 {
 			display: flex;
 			gap: 0.4rem;
@@ -87,8 +95,19 @@
 		border-bottom: 2px solid transparent;
 		transition: border 0.2s;
 
+		@include respond(small-phone) {
+			width: 70%;
+			text-align: center;
+			align-self: center;
+			justify-self: center;
+			padding: 1.6rem 0;
+			border-bottom: 2px solid $color-primary;
+		}
 		&:hover {
 			border-bottom: 2px solid $color-primary;
+			@include respond(small-phone) {
+				border-bottom: 2px solid $color-white;
+			}
 		}
 		&--cta {
 			display: flex;
@@ -102,6 +121,10 @@
 		&-icon {
 			width: 4rem;
 			height: 4rem;
+
+			@include respond(small-phone) {
+				display: none;
+			}
 
 			&-cta {
 				height: 3rem;
@@ -119,7 +142,7 @@
 	}
 
 	&__map {
-		width: 70%;
+		width: 100%;
 		height: 20rem;
 		border-radius: var(--border-radius-big);
 		@include respond(tablet) {

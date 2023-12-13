@@ -3,19 +3,23 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: start;
-	gap: 2vh;
-	padding: 1rem;
+	gap: 2.4em;
+	padding: 1rem 1rem 0;
+	max-width: 50rem;
+	align-self: end;
+	justify-self: center;
 
 	@include respond(small-tablet) {
 		padding: 0;
 	}
+
 	@include respond(small-phone) {
-		gap: 1rem;
+		align-self: center;
 	}
 
 	&__input {
 		width: 100%;
-		padding: 2.4rem 4.8rem;
+		padding: 1.6rem;
 		border-radius: var(--border-radius-big);
 		background-color: $color-white;
 		color: $layout-color-primary;
@@ -24,7 +28,6 @@
 		transition: all 0.2s;
 
 		@include respond(small-phone) {
-			padding: 2.4rem 1rem;
 			font-size: var(--small-text-fz);
 		}
 		&--subject {

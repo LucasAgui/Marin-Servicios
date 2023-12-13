@@ -179,6 +179,8 @@
 
 .open .product__type {
 	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
 }
 
 .open-product .product__type {

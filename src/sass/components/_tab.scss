@@ -95,6 +95,10 @@
 			@include respond(phone) {
 				grid-template-columns: repeat(auto-fill, minmax(35rem, 40rem));
 			}
+
+			@include respond(small-phone) {
+				padding: 1.6rem;
+			}
 		}
 	}
 
