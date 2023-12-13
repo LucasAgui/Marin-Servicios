@@ -88,12 +88,12 @@
 		&--1 {
 			display: none;
 			gap: 1.6rem;
-			grid-template-columns: repeat(auto-fit, minmax(24rem, 26rem));
+			grid-template-columns: repeat(auto-fit, minmax(26rem, 30rem));
 			align-content: center;
-			justify-content: center;
+			justify-content: space-around;
 
 			@include respond(phone) {
-				grid-template-columns: repeat(auto-fit, 85vw);
+				grid-template-columns: repeat(auto-fill, minmax(35rem, 40rem));
 			}
 		}
 	}

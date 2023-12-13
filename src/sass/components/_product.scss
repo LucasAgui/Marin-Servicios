@@ -6,19 +6,16 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: var(--border-radius-bigest);
-	background-color: $shade-light-white;
-	color: var($color-white);
+	background-color: $color-white;
+	color: var(--color-black);
 	font-weight: var(--normal-text-we);
 	font-size: var(--small-text-fz);
 	transition: background-color 0.2s;
-
+	cursor: pointer;
 	@include respond(phone) {
 		font-size: var(--big-text-fz);
 	}
 
-	&:hover {
-		background-color: $shade-medium-white;
-	}
 	&__heading {
 		font-weight: var(--normal-text-we);
 	}
@@ -34,12 +31,10 @@
 			object-fit: cover;
 			width: 15rem;
 			height: 15rem;
-			border-radius: var(--border-radius-bigest);
+			border-radius: var(--border-radius-medium);
 
 			@include respond(phone) {
 				object-fit: cover;
-				width: 25rem;
-				height: 20rem;
 			}
 		}
 	}
@@ -68,39 +63,52 @@
 	}
 
 	&__type {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
 		position: relative;
 		cursor: pointer;
 		@include respond(phone) {
 			font-size: var(--normal-text-fz);
 		}
+		z-index: 50;
 	}
 
 	&__normal,
 	&__alt {
 		padding: 0.8rem;
-		display: block;
 	}
 	&__alt {
-		&:hover {
-			background-color: $shade-large-white;
-		}
+		background-color: $color-black;
+		color: var(--color-white);
+		transition: all 0.2s;
 	}
 
 	&__normal {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 0.2rem;
 		transition: all 0.2s;
+		color: var(--color-primary);
+		background-color: var(--color-black);
 
 		&:hover {
-			background-color: $shade-large-white;
+			background-color: rgba($color-primary, 0.95);
+			color: var(--color-black);
+
+			.product__normal-row {
+				fill: var(--color-black);
+			}
 		}
 
 		&-row {
 			width: 2rem;
 			height: 2rem;
-			fill: $color-primary;
+			fill: var(--color-primary);
 			transform: translateY(10%);
+			transition: all 0.2s;
 		}
 	}
 
@@ -165,14 +173,32 @@
 	pointer-events: none;
 	visibility: hidden;
 }
-.open .product__type {
-	background-color: $shade-large-white;
+.open-product .product__type {
+	z-index: 100;
 }
 
 .open .product__type {
+	opacity: 0;
+}
+
+.open-product .product__type {
+	background-color: rgba($color-primary, 0.2);
+
+	.product__normal {
+		color: var(--color-black);
+		&-row {
+			transform: rotate(180deg);
+			fill: var(--color-black);
+		}
+		background-color: $shade-large-white;
+	}
 	.product__alt {
 		opacity: 1;
 		pointer-events: initial;
 		visibility: visible;
+		&:hover {
+			background-color: var(--color-primary);
+			color: var(--color-black);
+		}
 	}
 }

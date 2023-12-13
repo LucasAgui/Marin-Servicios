@@ -127,21 +127,35 @@ allLinks.forEach(function (link) {
 
 const products = document.querySelectorAll('.product');
 const productTypes = document.querySelectorAll('.product__type');
-const productsTypesAlt = document.querySelector('.product__alt');
+const productsTypesAlt = document.querySelectorAll('.product__alt');
 
 productTypes.forEach((e) =>
 	e.addEventListener('click', function (e) {
 		const clicked = e.target.closest('.product__type');
-		console.log(clicked);
 		document
 			.querySelector(`.product--${clicked.dataset.tab}`)
-			.classList.toggle('open');
+			.classList.toggle('open-product');
 	})
 );
 
+console.log(productsTypesAlt);
 productsTypesAlt.forEach((e) =>
-	addEventListener('click', (e) => {
-		const clicked = e.target.closest('.product__type');
-		console.log(clicked);
+	e.addEventListener('click', (e) => {
+		// Obtener alt y verificar si esta cambiado o no
+		const target = e.target;
+		const closestType = target.closest('.product__type');
+		if (closestType.classList.contains('changed')) {
+			target.innerHTML = `Camión completo`;
+			closestType.classList.remove('changed');
+			closestType.childNodes[1].innerHTML = `Medio camión <svg class="product__normal-row">
+			<use href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+		</svg>`;
+		} else {
+			target.innerHTML = `Medio camión`;
+			closestType.classList.add('changed');
+			closestType.childNodes[1].innerHTML = `Camión completo <svg class="product__normal-row">
+				<use href="src/media/svgs/sprite.svg#arrow-filled-down"></use>
+			</svg>`;
+		}
 	})
 );
