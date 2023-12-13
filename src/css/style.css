@@ -725,7 +725,7 @@ body {
   gap: 2.4em;
   padding: 1rem 1rem 0;
   max-width: 50rem;
-  align-self: end;
+  align-self: center;
   justify-self: center; }
   @media only screen and (max-width: 46.25em) {
     .form {
@@ -1110,6 +1110,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, 30vw));
     row-gap: 2.4rem;
+    column-gap: 1rem;
     align-content: center;
     justify-items: center;
     justify-content: center; }
@@ -1118,7 +1119,8 @@ body {
         grid-template-columns: repeat(2, minmax(min-content, 45vw));
         row-gap: 3.2rem; } }
   .footer__item {
-    width: 100%; }
+    width: 100%;
+    line-height: var(--line-height-small); }
     .footer__item-title {
       font-size: var(--medium-text-fz);
       margin-bottom: 2.4rem;
@@ -1141,7 +1143,7 @@ body {
     width: 100%;
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, 30vw));
+    grid-template-columns: repeat(3, 1fr);
     align-content: end;
     justify-content: start;
     font-size: var(--small-text-fz); }
@@ -1150,7 +1152,6 @@ body {
         display: grid; } }
   .footer__logo {
     display: flex;
-    flex-direction: column;
     align-items: start;
     justify-content: start;
     text-align: start; }
@@ -1164,14 +1165,20 @@ body {
       width: 100%;
       text-transform: uppercase;
       font-style: italic; }
-    .footer__logo img {
-      width: 8rem;
-      height: 8rem; }
+      @media only screen and (max-width: 29em) {
+        .footer__logo-text {
+          font-size: var(--smallest-text-fz); } }
   .footer__copyright {
-    grid-column: 3;
-    align-self: end; }
+    grid-column: 3 / -1;
+    align-self: start;
+    justify-self: start;
+    line-height: var(--line-height-small);
+    width: 100%; }
     @media only screen and (max-width: 55em) {
       .footer__copyright {
         width: 45vw;
         display: flex;
         justify-content: start; } }
+    @media only screen and (max-width: 29em) {
+      .footer__copyright {
+        font-size: var(--smallest-text-fz); } }
